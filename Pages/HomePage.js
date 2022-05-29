@@ -1,6 +1,7 @@
 import { Text, StyleSheet, View, Image } from "react-native";
 import NavBar from "../componants/NavBar";
 import CategoriesSwiper from "../componants/HomePage/CategoriesSwiper";
+import ZoneSwiper from "../componants/HomePage/ZoneSwiper";
 
 const HomePage = ({ navigation }) => {
   return (
@@ -39,7 +40,10 @@ const HomePage = ({ navigation }) => {
       </View>
 
       {/* Categories Swiper  */}
-      <CategoriesSwiper></CategoriesSwiper>
+      <CategoriesSwiper/>
+
+      {/* Zones Swiper */}
+      <ZoneSwiper/>
 
       <NavBar navigation={navigation} />
     </View>
