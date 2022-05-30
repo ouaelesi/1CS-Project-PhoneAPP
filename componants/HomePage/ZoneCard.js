@@ -5,15 +5,24 @@ const ZoneCard = (props) => {
     <View
       style={{
         width: 300,
-        backgroundColor: "#fff",
         marginRight: 20,
         padding: 8,
         borderRadius: 30,
+        backgroundColor : "#F2F2F2",
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 0,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 8 ,
+        position : "relative"
+   
       }}
     >
       <Image
         source={require("../../assets/ZoneImg.png")}
-        style={{ widht: 200, height: 150, borderRadius: 30 }}
+        style={{ widht: 200, height: 150, borderRadius: 25 }}
       ></Image>
       <View
         style={{
@@ -38,11 +47,14 @@ const ZoneCard = (props) => {
           }}
         >
           <Image
-            source={require("../../assets/map.svg")}
+            source={require("../../assets/star.svg")}
             style={{ width: 20, height: 20, marginLeft: 8, marginTop: 3 }}
           />
-          <Text style={{color:"white" , padding:4}}>4.6</Text>
+          <Text style={{ color: "white", padding: 4 }}>4.6</Text>
         </View>
+      </View>
+      <View style={{backgroundColor:"rgba(15,15,15,0.5)" ,width:40 ,height:40 , position:"absolute" , top: 13, right : 13 , borderRadius : 20 , alignItems:"center" , justifyContent:"space-around"}}>
+          <Image source={require('../../assets/heart.svg')} style={{width:20 ,height:20}}></Image>
       </View>
     </View>
   );

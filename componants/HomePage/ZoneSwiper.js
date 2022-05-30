@@ -29,7 +29,7 @@ const ZoneSwiper = () => {
         Categories
       </Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <View style={{ flexDirection: "row"  , marginTop : 20}}>
+        <View style={{ flexDirection: "row"  , marginTop : 20 , padding:4}}>
           {zonesData.map((zone, key) => (
             <ZoneCard />
           ))}
