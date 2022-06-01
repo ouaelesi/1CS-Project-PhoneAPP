@@ -8,7 +8,7 @@ const HomePage = ({ navigation }) => {
   return (
     <View
       style={{
-        paddingHorizontal: 10,
+        paddingHorizontal: 20,
         flex: 1,
         paddingTop: 50,
         backgroundColor: "white",
@@ -48,7 +48,7 @@ const HomePage = ({ navigation }) => {
       <View style={{ paddingTop: 20 }}>
         <Text
           style={{
-            fontSize: 35,
+            fontSize: 32,
             fontWeight: "bold",
             color: "#28333B",
           }}

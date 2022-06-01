@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     position: "absolute",
     bottom: 8,
-    width: "95%",
+    width: "100%",
+    height : 60
   },
   navItems: {
     color: "red",
