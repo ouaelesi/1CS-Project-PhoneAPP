@@ -4,9 +4,10 @@ const PointIntCard = (props) => {
   return (
     <View
       style={{
-        width: 300,
-        marginRight: 20,
+        width: "48%",
+        marginRight: 5,
         padding: 8,
+
         borderRadius: 30,
         backgroundColor : "#F2F2F2",
         shadowColor: "#000",
@@ -17,31 +18,32 @@ const PointIntCard = (props) => {
         shadowOpacity: 0.25,
         shadowRadius: 8 ,
         position : "relative",
+        
       }}
     >
       <Image
         source={require("../../assets/Musee.png")}
-        style={{ width: 280, height: 150, borderRadius: 25 }}
+        style={{ width: "98%", height: "50%", borderRadius: 25 }}
       ></Image>
       <View
         style={{
           flexDirection: "column",
-          padding: 10,
+          padding: 5,
           paddingTop: 20,
-          paddingBottom: 20,
+          paddingBottom: 5,
           justifyContent: "space-between",
         }}
       >
-        <View style={{paddingBottom: 10}}>
-          <Text style={{ fontSize: 18, fontWeight: "600" }}>Musée des Beaux Arts</Text>
-          <Text style={{ fontSize: 12, fontWeight: "500" ,color:"#6B6B6B"}} >Alger</Text>
+        <View style={{paddingBottom: 5}}>
+          <Text style={{ fontSize: 12, fontWeight: "600" }}>Musée des Beaux Arts</Text>
+          <Text style={{ fontSize: 10, fontWeight: "500" ,color:"#6B6B6B"}} >Alger</Text>
         </View>
         <View 
             style={{
               flexDirection: "row",
               justifyContent: "space-between"}}
               >
-            <Text style={{ fontSize: 12, fontWeight: "500" ,color:"#6B6B6B"}} >9AM -4PM</Text>
+            <Text style={{ fontSize: 10, fontWeight: "500" ,color:"#6B6B6B"}} >9AM -4PM</Text>
             <Text>Icons</Text>
           </View>
        

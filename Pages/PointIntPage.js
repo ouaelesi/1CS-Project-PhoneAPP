@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-
+import PointIntList from '../componants/PointIntPage/PointIntList'
 
 
 const PointIntPage = () => {
@@ -9,7 +9,8 @@ const PointIntPage = () => {
             style={{
                 flex: 1,
                 justifyContent: "center" ,
-                alignItems: "center"
+                alignItems: "center",
+                padding: "2%"
             }}
         >
            
