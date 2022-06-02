@@ -44,10 +44,10 @@ const PointIntCard = (props) => {
 
 const styles = StyleSheet.create({
   container : {
-    width: "40%",
+    width: "45%",
     margin: 2,
     padding: 8,
-
+    
     borderRadius: 30,
     backgroundColor : "#F2F2F2",
     shadowColor: "#000",
