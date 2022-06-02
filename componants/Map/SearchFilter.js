@@ -9,7 +9,7 @@ const SearchFilter = () => {
     "select type",
   ];
   return (
-    <View style={{ flexDirection: "row", marginTop: 10 }}>
+    <View style={{ flexDirection: "row", marginTop: 10,paddingLeft:20 }}>
       <View
         style={{
           backgroundColor: "#28333B",

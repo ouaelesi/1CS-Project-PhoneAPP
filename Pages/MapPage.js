@@ -3,15 +3,17 @@ import NavBar from "../componants/NavBar";
 import Map from "../componants/Map/Map";
 import SearchBar  from "../componants/Map/SearchBar";
 import SearchFilter from "../componants/Map/SearchFilter";
+import BestZones from "../componants/Map/BestZones";
 
 const MapPage = ({ navigation }) => {
   
   return (
-    <View style={{ paddingHorizontal: 20, flex: 1, paddingTop: 50 }}>
+    <View style={{ flex: 1, paddingTop: 50 }}>
         <SearchBar/>
         <SearchFilter/>
         <Text>ouael</Text>
         <Map/>
+        <BestZones/>
         <NavBar navigation={navigation} />
     </View>
   );

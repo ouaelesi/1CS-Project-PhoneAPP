@@ -8,7 +8,6 @@ const HomePage = ({ navigation }) => {
   return (
     <View
       style={{
-        paddingHorizontal: 20,
         flex: 1,
         paddingTop: 50,
         backgroundColor: "white",
@@ -19,6 +18,7 @@ const HomePage = ({ navigation }) => {
           flexDirection: "row",
           justifyContent: "space-between",
           paddingTop: 5,
+          paddingHorizontal:20 , 
         }}
       >
         <View style={{ flexDirection: "row" }}>
@@ -45,7 +45,7 @@ const HomePage = ({ navigation }) => {
           ></Image>
         </View>
       </View>
-      <View style={{ paddingTop: 20 }}>
+      <View style={{ paddingTop: 20 ,  paddingHorizontal:20 ,  }}>
         <Text
           style={{
             fontSize: 32,
@@ -63,6 +63,7 @@ const HomePage = ({ navigation }) => {
               right: 0,
               bottom: 0,
               borderRadius: 20,
+              
             }}
           />
         </Text>

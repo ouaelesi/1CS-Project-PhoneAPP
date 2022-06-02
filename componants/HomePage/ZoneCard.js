@@ -7,7 +7,7 @@ const ZoneCard = (props) => {
         marginRight: 20,
         padding: 8,
         borderRadius: 30,
-        backgroundColor : "#F2F2F2",
+        backgroundColor : "#F2F2f9",
         shadowColor: "#000",
         shadowOffset: {
           width: 0,
