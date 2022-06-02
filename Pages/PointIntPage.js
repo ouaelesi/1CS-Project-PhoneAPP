@@ -1,9 +1,9 @@
 import React from 'react';
-import {Text ,View} from 'react-native';
-import PointIntCard from '../componants/PointIntPage/PointIntCard';
+import {View} from 'react-native';
 
 
-const Test = () => {
+
+const PointIntPage = () => {
     return(
         <View
             style={{
@@ -13,8 +13,8 @@ const Test = () => {
             }}
         >
            
-            <PointIntCard/>
+            <PointIntList/>
         </View>
     )
 }
-export default Test;
+export default PointIntPage;
