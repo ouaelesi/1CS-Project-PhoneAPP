@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomePage from "./Pages/HomePage";
 import MapPage from "./Pages/MapPage";
+import PointIntPage from "./Pages/PointIntPage"
 
 const Stack = createNativeStackNavigator();
 
@@ -14,8 +15,8 @@ export default function App() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="HomePage" component={HomePage} />
-        <Stack.Screen name="MapPage" component={MapPage} />
+        <Stack.Screen name="PointInt" component={PointIntPage} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
