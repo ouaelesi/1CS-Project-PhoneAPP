@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomePage from "./Pages/HomePage";
 import MapPage from "./Pages/MapPage";
+import ZonePage from "./Pages/ZonePage";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export default function App() {
       >
         <Stack.Screen name="HomePage" component={HomePage} />
         <Stack.Screen name="MapPage" component={MapPage} />
+        <Stack.Screen name="ZonePage" component={ZonePage} />
       </Stack.Navigator>
     </NavigationContainer>
   );
