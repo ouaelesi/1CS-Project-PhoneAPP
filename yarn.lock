@@ -1063,9 +1063,11 @@
     "to-fast-properties" "^2.0.0"
 
 "@expo-google-fonts/poppins@^0.2.2":
+
   "integrity" "sha512-x0SzC8nWTC2pInIcBDiAuMJxhoglwqCGJYMM8ylI8HKDqBxMrfRTripB3xMGo6UtzROTcL+OX1w9nEcM5FK0PQ=="
   "resolved" "https://registry.npmjs.org/@expo-google-fonts/poppins/-/poppins-0.2.2.tgz"
   "version" "0.2.2"
+
 
 "@expo/bunyan@^4.0.0", "@expo/bunyan@4.0.0":
   "integrity" "sha512-Ydf4LidRB/EBI+YrB+cVLqIseiRfjUI/AeHBgjGMtq3GroraDu81OV7zqophRgupngoL3iS3JUMDMnxO7g39qA=="
@@ -1744,6 +1746,11 @@
   "integrity" "sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ=="
   "resolved" "https://registry.npmjs.org/@sideway/pinpoint/-/pinpoint-2.0.0.tgz"
   "version" "2.0.0"
+
+"@types/geojson@^7946.0.7":
+  version "7946.0.8"
+  resolved "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.8.tgz"
+  integrity sha512-1rkryxURpr6aWP7R786/UQOkJ3PcpQiWkAXBmdWc7ryFWqN6a4xfK7BtjXvFBKO9LjQ+MWQSWxYeZX1OApnArA==
 
 "@types/graceful-fs@^4.1.2":
   "integrity" "sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw=="
@@ -3098,6 +3105,7 @@
   "version" "14.0.0"
   dependencies:
     "@expo/config-plugins" "^4.0.14"
+
     "uuid" "^3.4.0"
 
 "expo-font@~10.1.0":
@@ -3145,6 +3153,7 @@
   "integrity" "sha512-S/6rwmgG+1cyHP1hCmylk9FLnavUWd/haWgVc8sUNiavaMBu/vCjeLUESFVJdYRKKN9i+avSzHdAVdKytNYo6A=="
   "resolved" "https://registry.npmjs.org/expo/-/expo-45.0.4.tgz"
   "version" "45.0.4"
+
   dependencies:
     "@babel/runtime" "^7.14.0"
     "@expo/cli" "0.1.4"
@@ -5503,6 +5512,7 @@
   "version" "0.0.17"
   dependencies:
     "@babel/parser" "^7.14.0"
+
     "flow-parser" "^0.121.0"
     "jscodeshift" "^0.13.1"
     "nullthrows" "^1.1.1"
@@ -5547,6 +5557,7 @@
   "integrity" "sha512-qNMz+mdIirCEmlrhapAtAG+SWVx6MAiSfCbFNhfHqiqu1xw1OKXdzIrjaBEPihRC2pcORCoCHduHGQe/Pz9Yuw=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.68.2.tgz"
   "version" "0.68.2"
+
   dependencies:
     "@jest/create-cache-key-function" "^27.0.1"
     "@react-native-community/cli" "^7.0.3"

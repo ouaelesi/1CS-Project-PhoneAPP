@@ -7,8 +7,8 @@ const GoTOMap = () => {
       style={{
         width: "80%",
         height: 160,
-        marginHorizontal: "auto",
-        marginTop: 35,
+        alignSelf : "center" , 
+        marginTop: 15,
         borderRadius: 40,
         borderColor : "#E17E01",
         borderWidth:2,
