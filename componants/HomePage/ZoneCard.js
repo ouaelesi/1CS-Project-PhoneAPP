@@ -2,7 +2,29 @@ import { View, Image, Text, TouchableOpacity } from "react-native";
 
 const ZoneCard = (props) => {
   return (
-    <TouchableOpacity >
+
+    <View
+      style={{
+        marginRight: 20,
+        padding: 8,
+        borderRadius: 30,
+        backgroundColor : "#F2F2f9",
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 0,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 8 ,
+        position : "relative"
+   
+      }}
+    >
+      <Image
+        source={require("../../assets/ZoneImg.png")}
+        style={{ widht: 150, height: 120, borderRadius: 25 }}
+      ></Image>
+
       <View
         style={{
           width: 300,
@@ -21,10 +43,12 @@ const ZoneCard = (props) => {
     
         }}
       >
-        <Image
-          source={require("../../assets/ZoneImg.png")}
-          style={{ widht: 200, height: 150, borderRadius: 25 }}
-        ></Image>
+
+        <View>
+          <Text style={{ fontSize: 28, fontWeight: "600" }}>Oran</Text>
+          <Text>Rue de Wlad Fayet</Text>
+        </View>
+
         <View
           style={{
             flexDirection: "row",
@@ -58,7 +82,7 @@ const ZoneCard = (props) => {
             <Image source={require('../../assets/heart.svg')} style={{width:20 ,height:20}}></Image>
         </View>
       </View>
-      </TouchableOpacity>
+
   );
 };
 

@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#28333B",
     borderRadius: 50,
     padding: 15,
+    alignSelf : "center" , 
     paddingHorizontal: 30,
     borderColor: "#E17E01",
     borderWidth: 2,
@@ -54,7 +55,8 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     position: "absolute",
     bottom: 8,
-    width: "95%",
+    width: "92%",
+    height : 60,
   },
   navItems: {
     color: "red",
