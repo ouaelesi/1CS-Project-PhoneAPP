@@ -6,12 +6,19 @@ import GoTOMap from "../componants/HomePage/GoTOMap";
 
 const HomePage = ({ navigation }) => {
   return (
-    <View style={{ paddingHorizontal: 10, flex: 1 , paddingTop : 30 ,backgroundColor:"white"}}>
+    <View
+      style={{
+        flex: 1,
+        paddingTop: 50,
+        backgroundColor: "white",
+      }}
+    >
       <View
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
-          paddingTop: 10,
+          paddingTop: 5,
+          paddingHorizontal:20 , 
         }}
       >
         <View style={{ flexDirection: "row" }}>
@@ -34,17 +41,16 @@ const HomePage = ({ navigation }) => {
         <View>
           <Image
             source={require("../assets/search.svg")}
-            style={{ width: 35, height: 35  , marginRight : 10}}
+            style={{ width: 35, height: 35, marginRight: 10 }}
           ></Image>
         </View>
       </View>
-      <View style={{ paddingTop: 20 }}>
+      <View style={{ paddingTop: 20 ,  paddingHorizontal:20 ,  }}>
         <Text
           style={{
-            fontSize: 35,
+            fontSize: 32,
             fontWeight: "bold",
             color: "#28333B",
-            position: "relative",
           }}
         >
           Let’s Discover Algeria!
@@ -54,10 +60,10 @@ const HomePage = ({ navigation }) => {
               height: 12,
               backgroundColor: "#E17E01",
               position: "absolute",
-              right: 40,
+              right: 0,
               bottom: 0,
               borderRadius: 20,
-              zIndex: -10,
+              
             }}
           />
         </Text>

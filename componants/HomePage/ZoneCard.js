@@ -4,11 +4,10 @@ const ZoneCard = (props) => {
   return (
     <View
       style={{
-        width: 300,
         marginRight: 20,
         padding: 8,
         borderRadius: 30,
-        backgroundColor : "#F2F2F2",
+        backgroundColor : "#F2F2f9",
         shadowColor: "#000",
         shadowOffset: {
           width: 0,
@@ -22,7 +21,7 @@ const ZoneCard = (props) => {
     >
       <Image
         source={require("../../assets/ZoneImg.png")}
-        style={{ widht: 200, height: 150, borderRadius: 25 }}
+        style={{ widht: 150, height: 120, borderRadius: 25 }}
       ></Image>
       <View
         style={{
@@ -33,7 +32,7 @@ const ZoneCard = (props) => {
         }}
       >
         <View>
-          <Text style={{ fontSize: 30, fontWeight: "600" }}>Oran</Text>
+          <Text style={{ fontSize: 28, fontWeight: "600" }}>Oran</Text>
           <Text>Rue de Wlad Fayet</Text>
         </View>
         <View
