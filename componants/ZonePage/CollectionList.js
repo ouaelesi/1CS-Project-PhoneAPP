@@ -41,7 +41,7 @@ const CollectionList= () => {
 
 
   
-  const ItemRender = ({ name , year , gender}) => (
+  const ItemRender = () => (
     <View style={styles.container}>
 
         <Image source={require('../../assets/smallImg.png')} />
