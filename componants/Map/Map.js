@@ -1,5 +1,6 @@
 import { View , StyleSheet} from "react-native";
-import MapView from "react-native-maps";
+import {useState , useEffect} from "react";
+import MapView, { Circle, Marker } from "react-native-maps";
 
 const Map = () => {
   const mapStyle = [
@@ -133,18 +134,61 @@ const Map = () => {
       ],
     },
   ];
-  return (
 
+  const [lng, setLng] = useState(3.5);
+  const [lat, setLat] = useState(35);
+  const [zoom, setZoom] = useState(5);
+
+  const [cartes, setCartes] = useState([]);
+  const [markers, setMarkers] = useState([]);
+  const [circles, setCircles] = useState([]);
+
+  var loaded = false;
+
+ 
+  useEffect(()=>{
+    if (!loaded){
+      fetch('http://walidthekraken.pythonanywhere.com/cartes/print',{
+        'methods':'GET',
+        headers : {
+           'content-type':'application/json'
+        }
+      })
+      .then(response => response.json())
+      .then((data) => {setCartes(data)})
+      .catch(error => console.log(error))
+    }
+    loaded = true;
+  },[])
+
+  useEffect(()=>{
+    setMarkers(cartes.map((carte)=><Marker key={carte.CarteId} coordinate={{latitude: carte.CarteLat,
+      longitude: carte.CarteLong}} pinColor={'black'}>
+    </Marker>))
+    
+    setCircles(cartes.map((carte)=><Circle key={carte.CarteId} center={{latitude: carte.CarteLat,
+      longitude: carte.CarteLong}} radius={carte.CartePerim} fillColor={'#22B2A995'}>
+
+    </Circle>))
+  },[cartes])
+
+  return (
       <MapView
         style={styles.map}
         region={{
-          latitude: 37.78825,
-          longitude: -122.4324,
+          latitude: lat,
+          longitude: lng,
           latitudeDelta: 0.015,
           longitudeDelta: 0.0121,
+          zoom : zoom
         }}
         customMapStyle={mapStyle}
-      ></MapView>
+      >
+
+        {markers}
+        {circles}
+
+      </MapView>
   );
 };
 const styles = StyleSheet.create({
