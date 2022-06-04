@@ -135,8 +135,8 @@ const Map = () => {
     },
   ];
 
-  const [lng, setLng] = useState(3.5);
-  const [lat, setLat] = useState(35);
+  const [lng, setLng] = useState(2);
+  const [lat, setLat] = useState(29);
   const [zoom, setZoom] = useState(5);
 
   const [cartes, setCartes] = useState([]);
@@ -178,9 +178,8 @@ const Map = () => {
         region={{
           latitude: lat,
           longitude: lng,
-          latitudeDelta: 0.015,
-          longitudeDelta: 0.0121,
-          zoom : zoom
+          latitudeDelta: 20,
+          longitudeDelta: 20
         }}
         customMapStyle={mapStyle}
       >
