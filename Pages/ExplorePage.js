@@ -27,31 +27,34 @@ const ExplorePage = ({ navigation }) => {
 export default ExplorePage;
 const styles = StyleSheet.create({
     zoneGeoView:{
+        marginHorizontal: "5%",
         flexDirection:'row',
         borderBottomColor: 'grey',
         borderBottomWidth: 1,
+        alignItems: 'center'
         
-    
-
     },
     zoneGeoText: {
         
 
     },
     zoneGeoLogo: {
-        
+        marginHorizontal: "2%"
     },
     zoneGeoName: {
-        
+      position: 'absolute',
+      right: '5%'
         
     },
     btnContainer: {
         backgroundColor:'#F2F2F2',
-        width: '100%',
+        alignSelf:'center',
+        width: '94%',
         height: '40%',
         borderWidth: 1,
         borderRadius: 20,
         borderColor: "rgba(0, 0, 0, .1)",
+        marginVertical: '4%'
 
     }
        

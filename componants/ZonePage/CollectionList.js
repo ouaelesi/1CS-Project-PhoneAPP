@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   flatlist: {
     position: 'absolute',
     alignSelf:'flex-end',
-    paddingRight: 20,
+    marginRight: "3.5%",
     top: '32%'
     
   },

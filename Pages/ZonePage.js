@@ -38,7 +38,7 @@ const ZonePage = ({ navigation }) => {
 
         <View style={styles.imgText}>
           <Text style={styles.imgTextVille}>Oran</Text>
-          <Text style={styles.imgTextRue}>Rue El Akid Lotfi</Text>
+          <Text style={styles.imgTextRue}>Front de Mer</Text>
         </View>
 
         <View style={styles.boxes}>
@@ -92,9 +92,11 @@ const ZonePage = ({ navigation }) => {
 export default ZonePage;
 const styles = StyleSheet.create({
   img: { 
-    width:"100%",
+    width:"96%",
     height:"58%",
-    borderRadius: 25 },
+    borderRadius: 25,
+    alignSelf: 'center'
+   },
 
     imgText:{
     position:'absolute',
@@ -105,8 +107,7 @@ const styles = StyleSheet.create({
     imgTextVille:{
       color:'white',
       fontFamily:'Poppins-SemiBold',
-      fontSize: 40,
-      marginBottom: -15
+      fontSize: 40
     
       },
 
@@ -117,13 +118,14 @@ const styles = StyleSheet.create({
         },
 
     title: {
-      paddingHorizontal: 10,
+      marginHorizontal: "3.5%",
+      marginBottom: "2%",
       fontSize: 30,
       fontFamily:"Poppins-SemiBold"
     },
     desc: {
         color: '#828282',
-        paddingHorizontal: 10,
+        marginHorizontal: "3.5%",
         fontSize: 15,
         fontFamily:'Poppins-Regular',
     },
@@ -136,7 +138,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignItems: 'center',
       position: 'absolute',
-      bottom: "1%"
+      bottom: "3%"
       
     },
     btnText:{
@@ -147,10 +149,11 @@ const styles = StyleSheet.create({
     },
     boxes:{
       flexDirection: "row",
-      paddingRight: 20,
+      marginRight: 20,
       justifyContent:'space-between',
-      paddingTop: "1.5%",
-      paddingBottom:"3%"
+      marginTop: "1.5%",
+      marginBottom:"2.5%",
+      marginLeft:"2%"
 
     },
     boxIcon:{
@@ -169,15 +172,15 @@ const styles = StyleSheet.create({
     },
     backBtn:{
       position:'absolute',
-      paddingLeft: 20,
+      marginLeft: "5%",
       alignSelf:'flex-start',
-      top: '6%'
+      top: '8%'
     },
     likeBtn:{
       position:'absolute',
-      paddingRight: 20,
+      marginLeft: "5%",
       alignSelf:'flex-end',
-      top: '6%'
+      top: '8%'
     },
     collectionList: {
       alignSelf:'flex-end',
