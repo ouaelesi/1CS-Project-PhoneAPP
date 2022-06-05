@@ -71,9 +71,9 @@ const HomePage = ({ navigation , ActivePag}) => {
       <CategoriesSwiper />
 
       {/* Zones Swiper */}
-      <ZoneSwiper />
+      <ZoneSwiper navigation={navigation}/>
 
-      <GoTOMap />
+      <GoTOMap navigation={navigation}/>
 
       <NavBar navigation={navigation} ActivePag={ActivePag}/>
     </View>

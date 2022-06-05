@@ -1,9 +1,10 @@
-import { View, Image, Text } from "react-native";
+import { View, Image, Text,TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
-const ZoneCard = (props) => {
+const ZoneCard = ({navigation}) => {
   return (
-    <View
+    <TouchableOpacity onPress={()=>navigation.navigate("ZonePage", { name: "ZonePage" })}>
+<View
       style={{
         marginRight: 20,
         padding: 8,
@@ -67,6 +68,8 @@ const ZoneCard = (props) => {
         <Ionicons name="heart-outline" size={25} color="white" />
       </View>
     </View>
+    </TouchableOpacity>
+    
   );
 };
 

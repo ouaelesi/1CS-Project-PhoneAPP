@@ -1,10 +1,10 @@
 import { View, StyleSheet, Pressable } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 
 const navitmes = [
   {
-    linkTo: "MapPage",
+    linkTo: "ZonePage",
     icon: "grid-outline",
   },
   {
@@ -20,25 +20,28 @@ const navitmes = [
     icon: "notifications-outline",
   },
   {
-    linkTo: "MapPage",
+    linkTo: "PointInt",
     icon: "person-outline",
   },
 ];
-const NavBar = ({ navigation , activePag }) => {
-  const [activePage , setActivepage] = useState("HomePage")
+const NavBar = ({ navigation, activePag }) => {
+  const [activePage, setActivepage] = useState("HomePage");
   return (
     <View style={styles.navContainer}>
       {navitmes.map((itm, key) => (
         <Pressable
           key={key}
           onPress={() => {
-            navigation.navigate(itm.linkTo, { name: "MapPage" })}}
+            navigation.navigate(itm.linkTo, { name: "MapPage" });
+          }}
         >
-          <Ionicons   name={itm.icon} size={activePage === itm.linkTo ? 29 : 25} color={`${activePage === itm.linkTo ? '#E17E01' : 'white'}`}/>
+          <Ionicons
+            name={itm.icon}
+            size={activePage === itm.linkTo ? 29 : 25}
+            color={`${activePage === itm.linkTo ? "#E17E01" : "white"}`}
+          />
         </Pressable>
-        
       ))}
-      
     </View>
   );
 };
