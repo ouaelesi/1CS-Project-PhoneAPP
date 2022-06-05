@@ -31,7 +31,7 @@ const ZoneSwiper = () => {
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row"  , marginTop : 20 , padding:4}}>
           {zonesData.map((zone, key) => (
-            <ZoneCard />
+            <ZoneCard key={key} />
           ))}
         </View>
       </ScrollView>

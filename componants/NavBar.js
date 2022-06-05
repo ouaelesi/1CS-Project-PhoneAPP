@@ -1,39 +1,44 @@
-import { View, StyleSheet, Image, Pressable } from "react-native";
+import { View, StyleSheet, Pressable } from "react-native";
+import { Ionicons } from '@expo/vector-icons';
+import { useState } from "react";
+
 const navitmes = [
   {
     linkTo: "MapPage",
-    icon: require("../assets/category.svg"),
+    icon: "grid-outline",
   },
   {
     linkTo: "MapPage",
-    icon: require("../assets/map.svg"),
+    icon: "map-outline",
+  },
+  {
+    linkTo: "HomePage",
+    icon: "home-outline",
   },
   {
     linkTo: "MapPage",
-    icon: require("../assets/home.svg"),
+    icon: "notifications-outline",
   },
   {
     linkTo: "MapPage",
-    icon: require("../assets/notification.svg"),
-  },
-  {
-    linkTo: "MapPage",
-    icon: require("../assets/user.svg"),
+    icon: "person-outline",
   },
 ];
-const NavBar = ({ navigation }) => {
+const NavBar = ({ navigation , activePag }) => {
+  const [activePage , setActivepage] = useState("HomePage")
   return (
     <View style={styles.navContainer}>
       {navitmes.map((itm, key) => (
         <Pressable
-          onPress={() => navigation.navigate(itm.linkTo, { name: "MapPage" })}
+          key={key}
+          onPress={() => {
+            navigation.navigate(itm.linkTo, { name: "MapPage" })}}
         >
-          <Image
-            source={itm.icon}
-            style={{ width: 25, height: 25, fill: "red" }}
-          />
+          <Ionicons   name={itm.icon} size={activePage === itm.linkTo ? 29 : 25} color={`${activePage === itm.linkTo ? '#E17E01' : 'white'}`}/>
         </Pressable>
+        
       ))}
+      
     </View>
   );
 };
@@ -41,8 +46,8 @@ const styles = StyleSheet.create({
   navContainer: {
     backgroundColor: "#28333B",
     borderRadius: 50,
-    padding: 15,
-    alignSelf : "center" , 
+    padding: 12,
+    alignSelf: "center",
     paddingHorizontal: 30,
     borderColor: "#E17E01",
     borderWidth: 2,
@@ -56,7 +61,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 8,
     width: "92%",
-    height : 60,
+    height: 60,
   },
   navItems: {
     color: "red",

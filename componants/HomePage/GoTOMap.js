@@ -1,5 +1,6 @@
 import { View, ImageBackground, Text , Image } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
+import { Ionicons } from "@expo/vector-icons";
 
 const GoTOMap = () => {
   return (
@@ -28,8 +29,8 @@ const GoTOMap = () => {
       >
           <LinearGradient colors={['transparent', 'rgba(15,15,15,0.6)']} style={{width : "100%" , height:"100%" ,borderRadius:38 , justifyContent :"space-around"}}>
              <View>
-             <Image source={require('../../assets/WhiteSearch.svg')} style={{width:40 , height:40 , marginHorizontal :"auto"}}></Image>
-              <Text style={{textAlign:"center"  ,fontSize : 25 , fontWeight:"500" , marginTop : 7 , color : "white"}}>Go To Map</Text>
+<Ionicons name="search" size={45} style={{alignSelf : "center"}} color="white"/>
+              <Text style={{textAlign:"center"  ,fontSize : 25 , fontWeight:"500" , marginTop : 5 , color : "white"}}>Go To Map</Text>
              </View>
               
           </LinearGradient>
