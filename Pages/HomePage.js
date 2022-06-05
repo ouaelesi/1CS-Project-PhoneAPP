@@ -3,8 +3,9 @@ import NavBar from "../componants/NavBar";
 import CategoriesSwiper from "../componants/HomePage/CategoriesSwiper";
 import ZoneSwiper from "../componants/HomePage/ZoneSwiper";
 import GoTOMap from "../componants/HomePage/GoTOMap";
+import { Ionicons } from '@expo/vector-icons';
 
-const HomePage = ({ navigation }) => {
+const HomePage = ({ navigation , ActivePag}) => {
   return (
     <View
       style={{
@@ -29,20 +30,17 @@ const HomePage = ({ navigation }) => {
           <Text
             style={{
               fontSize: 30,
-              fontWeight: "semibold",
               marginLeft: 20,
               color: "#28333B",
             }}
           >
             Hi, Ouael
+            
           </Text>
         </View>
 
         <View>
-          <Image
-            source={require("../assets/search.svg")}
-            style={{ width: 35, height: 35, marginRight: 10 }}
-          ></Image>
+        <Ionicons name="search" size={33} color="black"/>
         </View>
       </View>
       <View style={{ paddingTop: 20 ,  paddingHorizontal:20 ,  }}>
@@ -53,7 +51,7 @@ const HomePage = ({ navigation }) => {
             color: "#28333B",
           }}
         >
-          Let’s Discover Algeria!
+          Let’s Discover Algeria
           <View
             style={{
               width: 120,
@@ -73,11 +71,11 @@ const HomePage = ({ navigation }) => {
       <CategoriesSwiper />
 
       {/* Zones Swiper */}
-      <ZoneSwiper />
+      <ZoneSwiper navigation={navigation}/>
 
-      <GoTOMap />
+      <GoTOMap navigation={navigation}/>
 
-      <NavBar navigation={navigation} />
+      <NavBar navigation={navigation} ActivePag={ActivePag}/>
     </View>
   );
 };

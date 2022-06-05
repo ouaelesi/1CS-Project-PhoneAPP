@@ -1,6 +1,6 @@
-import {StyleSheet} from "react-native";
-import {NavigationContainer} from "@react-navigation/native";
-import {createNativeStackNavigator} from "@react-navigation/native-stack";
+import { StyleSheet ,Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomePage from "./Pages/HomePage";
 import MapPage from "./Pages/MapPage";
 import ZonePage from "./Pages/ZonePage";

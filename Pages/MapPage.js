@@ -11,7 +11,6 @@ const MapPage = ({ navigation }) => {
     <View style={{ flex: 1, paddingTop: 50 }}>
         <SearchBar/>
         <SearchFilter/>
-        <Text>ouael</Text>
         <Map/>
         <BestZones/>
         <NavBar navigation={navigation} />

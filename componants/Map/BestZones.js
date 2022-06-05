@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet ,View ,Text,ScrollView} from 'react-native';
+import { StyleSheet ,View ,Text,ScrollView ,Image} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 const BestZones = () => {
     const Zones =[
@@ -12,8 +13,28 @@ const BestZones = () => {
                 <View style={{flexDirection :"row" ,marginTop :5}}>
  {
      Zones.map((zone,key)=>(
-         <View style={{width:90 , height:90 , backgroundColor : "gray" , marginRight:10}}>
-
+         <View style={{width:90 , height:90 , backgroundColor : "gray" , marginRight:10 , borderRadius:15}}>
+               <Image
+            source={require("../../assets/ZoneImg.png")}
+            style={{ width:90, height: 90 , borderRadius:15}}
+          ></Image>
+          <View
+          style={{
+            backgroundColor: "#E17E01",
+            width: 40,
+            height: 20,
+            borderRadius: 20,
+            flexDirection: "row",
+            padding: 3,
+            paddingLeft: 8,
+            position : "absolute" ,
+            bottom :5 , 
+            right : 5
+          }}
+        >
+          <Ionicons name="star-outline" size={10} color="white" />
+          <Text style={{ color: "white", marginLeft: 2 , fontSize :10}}>4.6</Text>
+        </View>
          </View>
      ))
  }
