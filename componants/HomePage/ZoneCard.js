@@ -22,7 +22,7 @@ const ZoneCard = ({navigation}) => {
     >
       <Image
         source={require("../../assets/ZoneImg.png")}
-        style={{ widht: 150, height: 120, borderRadius: 25 }}
+        style={{ width: 250, height: 120, borderRadius: 25 }}
       ></Image>
       <View
         style={{
