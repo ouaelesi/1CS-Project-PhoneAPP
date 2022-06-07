@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Image } from "react-native";
+import { Text, StyleSheet, View, Image , ScrollView } from "react-native";
 import NavBar from "../componants/NavBar";
 import CategoriesSwiper from "../componants/HomePage/CategoriesSwiper";
 import ZoneSwiper from "../componants/HomePage/ZoneSwiper";
@@ -10,15 +10,16 @@ const HomePage = ({ navigation , ActivePag}) => {
     <View
       style={{
         flex: 1,
-        paddingTop: 50,
+        paddingTop: 40,
         backgroundColor: "white",
       }}
     >
+      <ScrollView>
       <View
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
-          paddingTop: 5,
+          paddingTop: 3,
           paddingHorizontal:20 , 
         }}
       >
@@ -74,6 +75,11 @@ const HomePage = ({ navigation , ActivePag}) => {
       <ZoneSwiper navigation={navigation}/>
 
       <GoTOMap navigation={navigation}/>
+      <View style={{height : 80}}>
+
+      </View>
+      </ScrollView>
+      
 
       <NavBar navigation={navigation} ActivePag={ActivePag}/>
     </View>
