@@ -15,13 +15,13 @@ const CityCard = () => {
                 <Text
                     style={{
                     color: "#FFF",
-                    fontSize: "50%",
+                    fontSize: 40,
                     fontFamily: 'Poppins_600SemiBold'
                 }}>Oran</Text>
                 <Text
                     style={{
                     color: "#FFF",
-                    fontSize: "20%",
+                    fontSize: 20,
                     fontFamily: 'Poppins_500Medium'
                 }}>Front De Mer</Text>
             </View>

@@ -4,7 +4,7 @@ const PointIntCard = (props) => {
     return (
         <View style={styles.container}>
 
-            <Image
+           {/*  <Image
                 source={require("../../assets/PointIntPage/images/musee.png")}
                 style={styles.image}></Image>
             <View style={styles.header}>
@@ -52,7 +52,7 @@ const PointIntCard = (props) => {
                     </View>
                 </View>
 
-            </View>
+            </View> */}
             {/* <View style={{backgroundColor:"rgba(15,15,15,0.5)" ,width:40 ,height:40 , position:"absolute" , top: 13, right : 13 , borderRadius : 20 , alignItems:"center" , justifyContent:"space-around"}}>
           <Image source={require('../../assets/heart.svg')} style={{width:20 ,height:20}}></Image>
       </View> */}

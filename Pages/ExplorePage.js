@@ -1,10 +1,15 @@
 import { Text, StyleSheet, View, Image, SafeAreaView } from "react-native";
 import NavBar from "../componants/NavBar";
 import GoTOMap from "../componants/HomePage/GoTOMap";
+import CityCard from '../componants/CityCard';
+import ExploreButton from "../componants/ExplorePage/ExploreButton";
 
 const ExplorePage = ({ navigation }) => {
   return (
     <SafeAreaView style={{ paddingHorizontal: 10, flex: 1 , paddingTop : 30 ,backgroundColor:"#FFFFFF"}}>
+
+      <CityCard/>
+
         <View style={styles.zoneGeoView}>
             <Image style={styles.zoneGeoLogo} source={require('../assets/zoneGeo.png')}></Image>
             <Text style={styles.zoneGeoText}>Zone géographique</Text>
@@ -27,7 +32,9 @@ const ExplorePage = ({ navigation }) => {
 export default ExplorePage;
 const styles = StyleSheet.create({
     zoneGeoView:{
-        marginHorizontal: "5%",
+        marginVertical: "4%",
+        marginHorizontal: "4%",
+        paddingBottom: "2%",
         flexDirection:'row',
         borderBottomColor: 'grey',
         borderBottomWidth: 1,

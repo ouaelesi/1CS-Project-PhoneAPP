@@ -30,7 +30,7 @@ const NavBar = ({ navigation }) => {
         >
           <Image
             source={itm.icon}
-            style={{ width: 25, height: 25, fill: "red" }}
+            style={{ width: 25, height: 25 }}
           />
         </Pressable>
       ))}

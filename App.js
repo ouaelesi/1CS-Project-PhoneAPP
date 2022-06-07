@@ -20,11 +20,11 @@ export default function App() {
                 screenOptions={{
                 headerShown: false
             }}>
-                <Stack.Screen name="HomePage" component={HomePage}/>
+                {/* <Stack.Screen name="HomePage" component={HomePage}/>
                 <Stack.Screen name="MapPage" component={MapPage}/>
-                <Stack.Screen name="ZonePage" component={ZonePage} /> 
+                <Stack.Screen name="ZonePage" component={ZonePage} /> */} 
                 <Stack.Screen name="ExplorePage" component={ExplorePage}/>
-                <Stack.Screen name="PointInt" component={PointIntPage}/>
+                {/* <Stack.Screen name="PointInt" component={PointIntPage}/> */}
 
             </Stack.Navigator>
         </NavigationContainer>

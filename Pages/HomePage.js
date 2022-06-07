@@ -29,7 +29,7 @@ const HomePage = ({ navigation }) => {
           <Text
             style={{
               fontSize: 30,
-              fontWeight: "semibold",
+              fontWeight: "bold",
               marginLeft: 20,
               color: "#28333B",
             }}
