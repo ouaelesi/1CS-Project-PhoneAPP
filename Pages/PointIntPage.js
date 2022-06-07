@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, SafeAreaView, Image, StyleSheet} from 'react-native';
 import PointIntList from '../componants/PointIntPage/PointIntList';
 import DropDown from '../componants/PointIntPage/Dropdown';
@@ -16,10 +16,11 @@ const PointIntPage = () => {
                 <View style={styles.searchCritere}>
                     <Text
                         style={{
-                        fontSize: "25%",
+                        fontSize: 25,
                         fontWeight: "500",
                         color: "#28333B",
-                        margin: "1%"
+                        margin: "1%",
+                        fontFamily: 'Poppins_500Medium'
                     }}>Catégorie</Text>
                     <DropDown/>
                 </View>
@@ -27,10 +28,11 @@ const PointIntPage = () => {
                 <View style={styles.searchCritere}>
                     <Text
                         style={{
-                        fontSize: "25%",
+                        fontSize: 25,
                         fontWeight: "500",
                         color: "#28333B",
-                        margin: "1%"
+                        margin: "1%",
+                        fontFamily: 'Poppins_500Medium'
                     }}>Thème</Text>
                     <DropDown/>
                 </View>
@@ -43,15 +45,15 @@ const PointIntPage = () => {
 
             <View style={styles.line}></View>
             <View style={{
-                flex: 1,
-                
+                flex: 1
             }}>
                 <Text
                     style={{
-                    fontSize: "25%",
+                    fontSize: 25,
                     fontWeight: "500",
                     color: "#28333B",
-                    margin: "5%"
+                    margin: "5%",
+                    fontFamily: 'Poppins_500Medium'
                 }}>Points d'interêts
                 </Text>
 

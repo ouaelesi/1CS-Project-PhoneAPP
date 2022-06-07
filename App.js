@@ -16,8 +16,8 @@ export default function App() {
                 headerShown: false
             }}>
                 {/* <Stack.Screen name="HomePage" component={HomePage}/>
-                <Stack.Screen name="MapPage" component={MapPage}/>
-                <Stack.Screen name="PointInt" component={PointIntPage}/> */}
+                <Stack.Screen name="MapPage" component={MapPage}/> */}
+                {/* <Stack.Screen name="PointInt" component={PointIntPage}/> */}
                 <Stack.Screen name="EventPage" component={EventPage}/>
 
             </Stack.Navigator>

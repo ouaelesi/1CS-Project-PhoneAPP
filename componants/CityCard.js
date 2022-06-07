@@ -1,9 +1,7 @@
 import {View, Image, Text, StyleSheet, SafeAreaView} from "react-native";
-import {useFonts, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold} from '@expo-google-fonts/poppins';
 
 const CityCard = () => {
 
-    let [fontsLoaded] = useFonts({Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold});
 
     return (
         <SafeAreaView style={styles.container}>
@@ -15,13 +13,13 @@ const CityCard = () => {
                 <Text
                     style={{
                     color: "#FFF",
-                    fontSize: "50%",
+                    fontSize: 50,
                     fontFamily: 'Poppins_600SemiBold'
                 }}>Oran</Text>
                 <Text
                     style={{
                     color: "#FFF",
-                    fontSize: "20%",
+                    fontSize: 20,
                     fontFamily: 'Poppins_500Medium'
                 }}>Front De Mer</Text>
             </View>

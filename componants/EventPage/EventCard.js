@@ -1,9 +1,7 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
-import {useFonts, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold} from '@expo-google-fonts/poppins';
 
 const EventCard = () => {
-    let [fontsLoaded] = useFonts({Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold});
 
     return (
 
@@ -12,21 +10,21 @@ const EventCard = () => {
                 <Text
                     style={{
                     fontFamily: "Poppins_500Medium",
-                    fontSize: "20%",
+                    fontSize: 16,
                     marginBottom: "2%",
                     color: "#28333B",
-                    // width: "30%"
+                    width: "90%"
                 }}>Exposition d'art moderne</Text>
                 <Text
                     style={{
                     fontFamily: "Poppins_500Medium",
-                    fontSize: "14%",
+                    fontSize: 12,
                     marginBottom: "4%",
                     color: "#6B6B6B",
-                    //  width: "30%"
+                    width: "90%"
                 }}>Cet
-                    évènement est un rendez-vous incontournable organisé chaque automne à Oran et
-                    destiné à tous les amateurs d'art contemporain.</Text>
+                    évènement est un rendez-vous incontournable destiné à tous les amateurs d'art
+                    contemporain.</Text>
 
                 <View style={styles.more}>
 
@@ -39,7 +37,7 @@ const EventCard = () => {
                             <Text
                                 style={{
                                 fontFamily: "Poppins_500Medium",
-                                fontSize: "12%",
+                                fontSize: 8,
                                 color: "#6B6B6B"
                             }}>10 mars 2022</Text>
 
@@ -51,7 +49,7 @@ const EventCard = () => {
                             <Text
                                 style={{
                                 fontFamily: "Poppins_500Medium",
-                                fontSize: "12%",
+                                fontSize: 8,
                                 color: "#6B6B6B"
                             }}>Musée des Beaux Arts - Oran</Text>
 
@@ -67,8 +65,8 @@ const EventCard = () => {
                         <Text
                             style={{
                             fontFamily: "Poppins_500Medium",
-                            fontSize: "15%",
-                            marginLeft: "4%",
+                            fontSize: 11,
+                            marginLeft: "5%",
                             color: "#FFF"
                         }}>Notify Me</Text>
 
@@ -76,12 +74,9 @@ const EventCard = () => {
                 </View>
             </View>
 
-            {/* <Image
+            <Image
                 source={require("../../assets/PointIntPage/images/musee.png")}
-                style={styles.image}></Image> */}
-                {/* <View  style={styles.image}>
-
-                </View> */}
+                style={styles.image}></Image>  
         </View>
 
     )
@@ -89,9 +84,10 @@ const EventCard = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 0,
+        flex: 1,
         flexDirection: "row",
 
+        marginVertical: "4%",
         padding: "4%",
         alignSelf: "center",
         width: "94%",
@@ -111,12 +107,24 @@ const styles = StyleSheet.create({
 
         position: 'relative'
     },
-    information: {},
+    information: {
+        flex: 3
+    },
+
+    image: {
+        alignSelf: "center",
+        flex: 1,
+        width: "8%",
+        height: "98%",
+        borderRadius: 15,
+        backgroundColor: "#000"
+    },
 
     more: {
-
+        flex: 3,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        width: "90%"
     },
     dateplace: {
         flexDirection: 'row',
@@ -136,12 +144,6 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         justifyContent: 'center'
-    }, 
-    image: {
-        width: "10%",
-        height: 130,
-        borderRadius: 25,
-        backgroundColor: "#000"
     }
 });
 
