@@ -1,27 +1,28 @@
-import { View, Image, Text } from "react-native";
+import { View, Image, Text,TouchableOpacity } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
-const ZoneCard = (props) => {
+const ZoneCard = ({navigation}) => {
   return (
-    <View
+    <TouchableOpacity onPress={()=>navigation.navigate("ZonePage", { name: "ZonePage" })}>
+<View
       style={{
         marginRight: 20,
         padding: 8,
         borderRadius: 30,
-        backgroundColor : "#F2F2f9",
+        backgroundColor: "#F2F2f9",
         shadowColor: "#000",
         shadowOffset: {
           width: 0,
           height: 0,
         },
         shadowOpacity: 0.25,
-        shadowRadius: 8 ,
-        position : "relative"
-   
+        shadowRadius: 8,
+        position: "relative",
       }}
     >
       <Image
         source={require("../../assets/ZoneImg.png")}
-        style={{ widht: 150, height: 120, borderRadius: 25 }}
+        style={{ width: 250, height: 120, borderRadius: 25 }}
       ></Image>
       <View
         style={{
@@ -43,19 +44,32 @@ const ZoneCard = (props) => {
             borderRadius: 20,
             marginTop: 20,
             flexDirection: "row",
+            padding: 4,
+            paddingLeft: 8,
           }}
         >
-          <Image
-            source={require("../../assets/star.svg")}
-            style={{ width: 20, height: 20, marginLeft: 8, marginTop: 3 }}
-          />
-          <Text style={{ color: "white", padding: 4 }}>4.6</Text>
+          <Ionicons name="star-outline" size={17} color="white" />
+          <Text style={{ color: "white", marginLeft: 2 }}>4.6</Text>
         </View>
       </View>
-      <View style={{backgroundColor:"rgba(15,15,15,0.5)" ,width:40 ,height:40 , position:"absolute" , top: 13, right : 13 , borderRadius : 20 , alignItems:"center" , justifyContent:"space-around"}}>
-          <Image source={require('../../assets/heart.svg')} style={{width:20 ,height:20}}></Image>
+      <View
+        style={{
+          backgroundColor: "rgba(15,15,15,0.5)",
+          width: 40,
+          height: 40,
+          position: "absolute",
+          top: 13,
+          right: 13,
+          borderRadius: 20,
+          alignItems: "center",
+          justifyContent: "space-around",
+        }}
+      >
+        <Ionicons name="heart-outline" size={25} color="white" />
       </View>
     </View>
+    </TouchableOpacity>
+    
   );
 };
 
