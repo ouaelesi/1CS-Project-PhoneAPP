@@ -9,7 +9,9 @@ import EventPage from "./Pages/EventPage";
 
 import ZonePage from "./Pages/ZonePage";
 import ExplorePage from "./Pages/ExplorePage";
-
+import PointIntPage from "./Pages/PointIntPage";
+import LoginScreen from "./Pages/LoginScreen";
+import RegisterScreen from "./Pages/RegisterScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,9 +22,12 @@ export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator
+                initialRouteName="LoginPage"
                 screenOptions={{
                 headerShown: false
             }}>
+                <Stack.Screen name="RegisterPage" component={RegisterScreen}/>
+                <Stack.Screen name="LoginPage" component={LoginScreen}/>
                 <Stack.Screen name="HomePage" component={HomePage}/>
                 <Stack.Screen name="MapPage" component={MapPage}/>
                 <Stack.Screen name="ZonePage" component={ZonePage} /> 
