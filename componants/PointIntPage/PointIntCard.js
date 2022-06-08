@@ -11,15 +11,17 @@ const PointIntCard = (props) => {
                 <View style={styles.musee}>
                     <Text
                         style={{
-                        fontSize: "13%",
+                        fontSize: 13,
                         fontWeight: "600",
-                        color: "rgba(40, 51, 59, 1)"
+                        color: "rgba(40, 51, 59, 1)",
+                        fontFamily: 'Poppins_500Medium'
                     }}>Musée des Beaux Arts</Text>
                     <Text
                         style={{
-                        fontSize: "10%",
+                        fontSize: 10,
                         fontWeight: "500",
-                        color: "#6B6B6B"
+                        color: "#6B6B6B",
+                        fontFamily: 'Poppins_500Medium'
                     }}>Oran</Text>
                 </View>
                 <View style={styles.footer}>
@@ -32,9 +34,10 @@ const PointIntCard = (props) => {
                         <Text
                             style={{
                             marginLeft: "5%",
-                            fontSize: "10%",
+                            fontSize: 10,
                             fontWeight: "500",
-                            color: "#6B6B6B"
+                            color: "#6B6B6B",
+                            fontFamily: 'Poppins_500Medium'
                         }}>9AM -4PM</Text>
 
                     </View>

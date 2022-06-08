@@ -13,7 +13,7 @@ const BestZones = () => {
                 <View style={{flexDirection :"row" ,marginTop :5}}>
  {
      Zones.map((zone,key)=>(
-         <View style={{width:90 , height:90 , backgroundColor : "gray" , marginRight:10 , borderRadius:15}}>
+         <View key={key} style={{width:90 , height:90 , backgroundColor : "gray" , marginRight:10 , borderRadius:15}}>
                <Image
             source={require("../../assets/ZoneImg.png")}
             style={{ width:90, height: 90 , borderRadius:15}}

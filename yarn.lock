@@ -2134,6 +2134,10 @@ babel-preset-fbjs@^3.4.0:
     "@babel/plugin-transform-shorthand-properties" "^7.0.0"
     "@babel/plugin-transform-spread" "^7.0.0"
     "@babel/plugin-transform-template-literals" "^7.0.0"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c665641d51f49ce79927dec460a1ae9595a4d20
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
 balanced-match@^1.0.0:
@@ -3099,6 +3103,10 @@ expo-constants@~13.1.1:
   version "13.1.1"
   resolved "https://registry.npmjs.org/expo-constants/-/expo-constants-13.1.1.tgz"
   integrity sha512-QRVHrrMCLenBzWZ8M+EvCXM+jjdQzFMW27YQHRac3SGGoND1hWr81scOmGwlFo2wLZrYXm8HcYt1E6ry3IIwrA==
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c665641d51f49ce79927dec460a1ae9595a4d20
   dependencies:
     "@expo/config" "^6.0.14"
     uuid "^3.3.2"
@@ -3114,6 +3122,10 @@ expo-file-system@~14.0.0:
   integrity sha512-Asva7ehLUq/PIem6Y+/OQvoIqhFqYDd7l4l49yDRDgLSbK2I7Fr8qGhDeDpnUXrMVamg2uwt9zRGhyrjFNRhVw==
   dependencies:
     "@expo/config-plugins" "^4.0.14"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c665641d51f49ce79927dec460a1ae9595a4d20
     uuid "^3.4.0"
 
 expo-font@~10.1.0:
@@ -3161,6 +3173,10 @@ expo@~45.0.0:
   version "45.0.4"
   resolved "https://registry.npmjs.org/expo/-/expo-45.0.4.tgz"
   integrity sha512-S/6rwmgG+1cyHP1hCmylk9FLnavUWd/haWgVc8sUNiavaMBu/vCjeLUESFVJdYRKKN9i+avSzHdAVdKytNYo6A==
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c665641d51f49ce79927dec460a1ae9595a4d20
   dependencies:
     "@babel/runtime" "^7.14.0"
     "@expo/cli" "0.1.4"
@@ -4667,6 +4683,10 @@ metro@0.67.0, metro@^0.67.0:
     "@babel/template" "^7.0.0"
     "@babel/traverse" "^7.14.0"
     "@babel/types" "^7.0.0"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c665641d51f49ce79927dec460a1ae9595a4d20
     absolute-path "^0.0.0"
     accepts "^1.3.7"
     async "^2.4.0"
@@ -5550,6 +5570,10 @@ react-native@0.68.2:
   version "0.68.2"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.68.2.tgz"
   integrity sha512-qNMz+mdIirCEmlrhapAtAG+SWVx6MAiSfCbFNhfHqiqu1xw1OKXdzIrjaBEPihRC2pcORCoCHduHGQe/Pz9Yuw==
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c665641d51f49ce79927dec460a1ae9595a4d20
   dependencies:
     "@jest/create-cache-key-function" "^27.0.1"
     "@react-native-community/cli" "^7.0.3"
@@ -5558,6 +5582,10 @@ react-native@0.68.2:
     "@react-native/assets" "1.0.0"
     "@react-native/normalize-color" "2.0.0"
     "@react-native/polyfills" "2.0.0"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c665641d51f49ce79927dec460a1ae9595a4d20
     abort-controller "^3.0.0"
     anser "^1.4.9"
     base64-js "^1.1.2"
@@ -5663,6 +5691,10 @@ regenerator-transform@^0.15.0:
   version "0.15.0"
   resolved "https://registry.npmjs.org/regenerator-transform/-/regenerator-transform-0.15.0.tgz"
   integrity sha512-LsrGtPmbYg19bcPHwdtmXwbW+TqNvtY4riE3P83foeHRroMbH6/2ddFBfab3t7kbzc7v7p4wbkIecHImqt0QNg==
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9c665641d51f49ce79927dec460a1ae9595a4d20
   dependencies:
     "@babel/runtime" "^7.8.4"
 

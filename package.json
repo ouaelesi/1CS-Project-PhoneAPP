@@ -10,6 +10,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo-google-fonts/dev": "^0.2.2",
     "@expo-google-fonts/poppins": "^0.2.2",
     "@expo/vector-icons": "^13.0.0",
     "@react-navigation/native": "^6.0.10",
