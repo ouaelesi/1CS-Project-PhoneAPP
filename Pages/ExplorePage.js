@@ -3,8 +3,16 @@ import NavBar from "../componants/NavBar";
 import GoTOMap from "../componants/HomePage/GoTOMap";
 import CityCard from '../componants/CityCard';
 import ExploreButton from "../componants/ExplorePage/ExploreButton";
+import ZoneMap from "../componants/ExplorePage/ZoneMap";
+import { useFonts } from 'expo-font';
 
 const ExplorePage = ({ navigation }) => {
+
+  let [fontsLoaded] = useFonts({
+    
+    'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
+  });
+
   return (
     <SafeAreaView style={{ paddingHorizontal: 10, flex: 1 , paddingTop : 30 ,backgroundColor:"#FFFFFF"}}>
 
@@ -18,7 +26,7 @@ const ExplorePage = ({ navigation }) => {
       
 
 
-      <GoTOMap />
+      <ZoneMap />
 
       <View style={styles.btnContainer}>
 
@@ -29,14 +37,14 @@ const ExplorePage = ({ navigation }) => {
               color={"rgba(225,126,1,.3)"}
               borderColor={"#E17E01"}
               small={true}
-              img={"../../assets/choisirPtInteret.png"}
+              id ={1}
               />
               <ExploreButton
               text={"Voir les\n événements \nà venir"} 
               color={"rgba(186,178,160,.5)"}
               borderColor={"#BAB2A0"}
               small={true}
-              img={"../../assets/voirEvent.png"}
+              id={2}
               
               />
 
@@ -48,7 +56,7 @@ const ExplorePage = ({ navigation }) => {
              color={"rgba(60,70,77,.2)"}
              borderColor={"#3C464D"}
              small={false}
-             img={"../../assets/choisirCircuit.png"}
+             id={3}
             />
              
            
@@ -63,7 +71,8 @@ const ExplorePage = ({ navigation }) => {
 export default ExplorePage;
 const styles = StyleSheet.create({
     zoneGeoView:{
-        marginVertical: "4%",
+        marginTop: "3%",
+        marginBottom: "1%",
         marginHorizontal: "4%",
         paddingBottom: "2%",
         flexDirection:'row',
@@ -73,13 +82,14 @@ const styles = StyleSheet.create({
         
     },
     zoneGeoText: {
-        
+        fontFamily: 'Poppins-Medium'
 
     },
     zoneGeoLogo: {
         marginHorizontal: "2%"
     },
     zoneGeoName: {
+      fontFamily: 'Poppins-Medium',
       position: 'absolute',
       right: '5%'
         
@@ -91,7 +101,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 20,
         borderColor: "rgba(0, 0, 0, .1)",
-        marginVertical: '4%'
+        marginVertical: '4%',
+        padding: '1.5%'
 
     },
     rowButton: {
