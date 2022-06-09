@@ -6,6 +6,7 @@ import ExploreButton from "../componants/ExplorePage/ExploreButton";
 import ZoneMap from "../componants/ExplorePage/ZoneMap";
 import { useFonts } from 'expo-font';
 
+
 const ExplorePage = ({ navigation }) => {
 
   let [fontsLoaded] = useFonts({
