@@ -22,7 +22,6 @@ const EventPage = () => {
                 color: "#28333B",
                 margin: "5%",
                 marginBottom: "2%",
-                fontFamily: 'Poppins_500Medium'
             }}>
                 Évènement à venir
             </Text>
@@ -50,7 +49,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#FFF"
     },
     scrollview: {
-
         marginHorizontal: "4%"
     },
     line: {

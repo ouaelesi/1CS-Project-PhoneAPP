@@ -10,9 +10,13 @@ import { useFonts } from 'expo-font';
 const ExplorePage = ({ navigation }) => {
 
   let [fontsLoaded] = useFonts({
-    
     'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
   });
+  if(! fontsLoaded){
+   return(
+     <Text>font loaded</Text> 
+   )
+  }
 
   return (
     <SafeAreaView style={{ paddingHorizontal: 10, flex: 1 , paddingTop : 30 ,backgroundColor:"#FFFFFF"}}>
