@@ -5,8 +5,8 @@ const SearchBar = () => {
   return (
     <View style={styles.navContainer}>
       <View style={{flexDirection : "row"}}>  
-      <Ionicons name="search" size={30} color="gray" style={{ marginLeft:19 ,marginTop :10}} />
-      <TextInput placeholder="Search Zone ..." placeholderTextColor="gray" style={{color:"white" , marginHorizontal:3}}></TextInput>
+      <Ionicons name="search" size={30} color="white" style={{ marginLeft:19 ,marginTop :10}} />
+      <TextInput placeholder="Search Zone ..." placeholderTextColor="white" style={{color:"white" , marginHorizontal:3}}></TextInput>
       </View>
       <Image
             source={require("../../assets/profil.png")}
@@ -17,7 +17,7 @@ const SearchBar = () => {
 };
 const styles = StyleSheet.create({
   navContainer: {
-    backgroundColor: "#28333B", 
+    backgroundColor: "rgba(40,51,59,0.9)", 
     borderRadius: 50,
     alignSelf: "center",
     borderColor: "#E17E01",

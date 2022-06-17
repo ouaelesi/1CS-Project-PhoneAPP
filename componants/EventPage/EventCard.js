@@ -65,8 +65,8 @@ const EventCard = () => {
                         <Text
                             style={{
                             fontFamily: "Poppins_500Medium",
-                            fontSize: 11,
-                            marginLeft: "5%",
+                            fontSize: 10,
+                            marginLeft: "4.5%",
                             color: "#FFF"
                         }}>Notify Me</Text>
 
@@ -87,23 +87,25 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "row",
 
-        marginVertical: "4%",
+        marginVertical: "2.5%",
         padding: "4%",
         alignSelf: "center",
-        width: "94%",
+        width: "98%",
         height: "36%",
         backgroundColor: "#000",
 
-        borderRadius: 25,
+        borderRadius: 20,
         backgroundColor: "#F2F2F2",
 
         shadowColor: "#000",
         shadowOffset: {
-            width: 2,
-            height: 2
+          width: 0,
+          height: 1,
         },
-        shadowOpacity: 0.2,
-        shadowRadius: 4,
+        shadowOpacity: 0.12,
+        shadowRadius: 30.22,
+        elevation: 5,
+
 
         position: 'relative'
     },
@@ -116,8 +118,8 @@ const styles = StyleSheet.create({
         flex: 1,
         width: "8%",
         height: "98%",
-        borderRadius: 15,
-        backgroundColor: "#000"
+        borderRadius: 12,
+        backgroundColor: "#000" ,
     },
 
     more: {

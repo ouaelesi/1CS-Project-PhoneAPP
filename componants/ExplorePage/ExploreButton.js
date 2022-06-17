@@ -9,7 +9,11 @@ const ExploreButton = (props) => {
       });
 
  return(
-     <TouchableOpacity  style={[styles.btnContainer,
+     <TouchableOpacity  
+     onPress={() => {
+        props.navigation.navigate(props.linkTo, { name: "MapPage" });
+      }}
+     style={[styles.btnContainer,
         {backgroundColor: props.color,
          borderColor: props.borderColor , 
          width: props.small ? "46%" : "95%",}]}>

@@ -49,6 +49,7 @@ const PointIntList = () => {
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
+                showsVerticalScrollIndicator={false}
                 data={DATA}
                 numColumns={2}
                 renderItem={renderItem}
@@ -63,7 +64,6 @@ const PointIntList = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: StatusBar.currentHeight || 0
     },
     item: {
         backgroundColor: '#f9c2ff',

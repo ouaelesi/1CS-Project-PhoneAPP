@@ -16,11 +16,11 @@ const navitmes = [
     icon: "home-outline",
   },
   {
-    linkTo: "MapPage",
+    linkTo: "PointInt",
     icon: "notifications-outline",
   },
   {
-    linkTo: "ExplorePage",
+    linkTo: "ProfilePage",
     icon: "person-outline",
   },
 ];
@@ -47,20 +47,24 @@ const NavBar = ({ navigation, activePag }) => {
 };
 const styles = StyleSheet.create({
   navContainer: {
-    backgroundColor: "#28333B",
+    backgroundColor: "rgba(40,51,59,0.9)",
     borderRadius: 50,
     padding: 12,
     alignSelf: "center",
     paddingHorizontal: 30,
     borderColor: "#E17E01",
-    borderWidth: 2,
+    borderWidth: 1,
     flexDirection: "row",
     justifyContent: "center",
     justifyContent: "space-between",
-    shadowColor: "#171717",
-    shadowOffset: { width: -2, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 3,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+    elevation: 3,
     position: "absolute",
     bottom: 8,
     width: "92%",

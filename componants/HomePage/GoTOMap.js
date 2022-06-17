@@ -8,19 +8,20 @@ const GoTOMap = ({ navigation }) => {
       <View
         style={{
           width: "80%",
-          height: 160,
+          height: 140,
           alignSelf: "center",
           marginTop: 15,
           borderRadius: 40,
           borderColor: "#E17E01",
-          borderWidth: 2,
+          borderWidth: 1,
           shadowColor: "#000",
           shadowOffset: {
             width: 0,
-            height: 0,
+            height: 1,
           },
-          shadowOpacity: 0.25,
-          shadowRadius: 5,
+          shadowOpacity: 0.92,
+          shadowRadius: 5.22,
+          elevation: 10,
         }}
       >
         <ImageBackground
