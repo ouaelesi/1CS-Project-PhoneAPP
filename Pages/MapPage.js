@@ -12,7 +12,7 @@ const MapPage = ({ navigation }) => {
         <SearchBar/>
         <SearchFilter/>
         <Map/>
-        <BestZones/>
+        <BestZones navigation={navigation}/>
         <NavBar navigation={navigation} />
     </View>
   );

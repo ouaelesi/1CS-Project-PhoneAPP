@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, Image, StyleSheet } from "react-native";
 import PointIntList from "../componants/PointIntPage/PointIntList";
 import DropDown from "../componants/PointIntPage/Dropdown";
 import CityCard from "../componants/CityCard";
+import { LinearGradient } from "expo-linear-gradient";
 
 const PointIntPage = () => {
   return (
@@ -57,7 +58,8 @@ const PointIntPage = () => {
             fontSize: 20,
             fontWeight: "500",
             color: "#28333B",
-            margin: "5%",
+            padding:10 ,
+ 
             fontFamily: "Poppins_500Medium",
           }}
         >
@@ -66,6 +68,15 @@ const PointIntPage = () => {
 
         <PointIntList />
       </View>
+      <LinearGradient
+        colors={["transparent", "rgba(15,15,15,0.7)"]}
+        style={{
+          width: "120%",
+          height: 100,
+          position: "absolute",
+          bottom : "0%"
+        }}
+      ></LinearGradient>
     </SafeAreaView>
   );
 };
@@ -75,13 +86,14 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     justifyContent: "center",
-    paddingTop: 20,
+    paddingTop: 10,
+    paddingHorizontal : 5 ,
     backgroundColor : "white"
   },
   searchContainer: {
     flex: 0,
     flexDirection: "row",
-    padding: "2%",
+    paddingVertical: "2%",
   },
   searchCritere: {
     flex: 1,

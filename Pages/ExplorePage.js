@@ -35,8 +35,11 @@ const ExplorePage = ({ navigation }) => {
       </View>
 
       <ZoneMap />
-      
+
       <View style={styles.btnContainer}>
+        <View>
+          
+        </View>
         <View style={styles.rowButton}>
           <ExploreButton
             text={"Choisir un\n point \nd'interet"}
@@ -44,6 +47,8 @@ const ExplorePage = ({ navigation }) => {
             borderColor={"#E17E01"}
             small={true}
             id={1}
+            linkTo ={"PointInt"}
+            navigation={navigation}
           />
           <ExploreButton
             text={"Voir les\n événements \nà venir"}
@@ -51,6 +56,8 @@ const ExplorePage = ({ navigation }) => {
             borderColor={"#BAB2A0"}
             small={true}
             id={2}
+            linkTo ={"EventPage"}
+            navigation={navigation}
           />
         </View>
 
@@ -60,6 +67,8 @@ const ExplorePage = ({ navigation }) => {
           borderColor={"#3C464D"}
           small={false}
           id={3}
+          linkTo ={""}
+          navigation={navigation}
         />
       </View>
 
@@ -100,11 +109,14 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0, 0, 0, .1)",
     marginVertical: "4%",
     padding: "1.5%",
+    position: "relative" , 
+    
   },
   rowButton: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    
   },
   smallBtn: {
     width: "50%",

@@ -37,21 +37,23 @@ const styles = StyleSheet.create({
     width: "98%",
     alignSelf: "center",
     justifyContent: "center",
-
-    shadowColor: "#000",
+    borderRadius :25 , 
+    shadowColor: "black",
     shadowOffset: {
-      width: 10,
-      height: 0,
+      width: 0,
+      height: 1,
     },
-    shadowOpacity: 0.12,
-    shadowRadius: 10.22,
-    elevation: 7,
+    shadowOpacity: 1,
+    shadowRadius: 2,
+    elevation: 5,
+    
   },
   image: {
     width: "98%",
     height: "100%",
     borderRadius: 25,
     alignSelf: "center",
+    
   },
 
   imgText: {

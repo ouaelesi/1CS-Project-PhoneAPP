@@ -49,6 +49,7 @@ const PointIntList = () => {
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
+                showsVerticalScrollIndicator={false}
                 data={DATA}
                 numColumns={2}
                 renderItem={renderItem}

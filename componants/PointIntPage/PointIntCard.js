@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
   container: {
     width: "45%",
     margin: 2,
-    padding: 3,
     paddingVertical: 5,
     paddingBottom: 0,
     marginBottom: 10,
@@ -102,6 +101,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "column",
     padding: 5,
+    paddingHorizontal :7 ,
     marginTop: 5,
     justifyContent: "space-between",
   },

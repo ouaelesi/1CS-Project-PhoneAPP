@@ -20,7 +20,7 @@ const navitmes = [
     icon: "notifications-outline",
   },
   {
-    linkTo: "ExplorePage",
+    linkTo: "ProfilePage",
     icon: "person-outline",
   },
 ];
