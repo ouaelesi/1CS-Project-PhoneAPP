@@ -12,7 +12,7 @@ const SearchFilter = () => {
     <View style={{ flexDirection: "row", marginTop: 10,paddingLeft:20 }}>
       <View
         style={{
-          backgroundColor: "#28333B",
+          backgroundColor: "rgba(40,51,59,0.9)",
           borderRadius: 50,
           width: 35,
           height: 35,
@@ -27,7 +27,7 @@ const SearchFilter = () => {
             <View
               key={key}
               style={{
-                backgroundColor: "#28333B",
+                backgroundColor: "rgba(40,51,59,0.9)",
                 borderRadius: 50,
                 marginLeft: 10,
                 height: 35,

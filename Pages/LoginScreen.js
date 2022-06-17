@@ -134,9 +134,9 @@ const LoginScreen = ({navigation}) => {
                   width: "auto",
                   alignSelf: "center"
                 }}>
-                  <Text style={styles.headerText}>Name</Text>
+                  <Text style={styles.headerText}>Algerisme</Text>
                   <View style={{ height: 10,
-                    width: 80,
+                    width: 140,
                     position: "absolute",
                     bottom: 2,
                     elevation: -1,

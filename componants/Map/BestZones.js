@@ -46,17 +46,21 @@ const BestZones = () => {
 
 const styles = StyleSheet.create({
     container : {
-        backgroundColor: "#28333B",
+        backgroundColor: "rgba(40,51,59,0.9)",
         borderRadius: 20,
-        paddingVertical: 15,
+        paddingVertical: 10,
         alignSelf: "center",
         paddingLeft: 20,
         borderColor: "#E17E01",
         borderWidth: 2,
-        shadowColor: "#171717",
-        shadowOffset: { width: -2, height: 4 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
+        shadowColor: "#000",
+          shadowOffset: {
+            width: 0,
+            height: 1,
+          },
+          shadowOpacity: 0.22,
+          shadowRadius: 5.22,
+          elevation: 3,
         width: "92%",
         position: "absolute" ,
         bottom : 80 , 

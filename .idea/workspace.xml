@@ -6,6 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="1fd84437-aba3-4347-9f82-338b82f4caa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/ExplorePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/ExplorePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/LoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/PointIntPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/PointIntPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/RegisterScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/RegisterScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/ZonePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/ZonePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/CityCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/CityCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/HomePage/CategoriesSwiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/HomePage/CategoriesSwiper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/HomePage/GoTOMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/HomePage/GoTOMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/HomePage/ZoneCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/HomePage/ZoneCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/HomePage/ZoneSwiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/HomePage/ZoneSwiper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/Map/BestZones.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/Map/BestZones.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/Map/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/Map/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/Map/SearchFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/Map/SearchFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/PointIntPage/Dropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/PointIntPage/Dropdown.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/PointIntPage/PointIntCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/PointIntPage/PointIntCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/PointIntPage/PointIntList.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/PointIntPage/PointIntList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

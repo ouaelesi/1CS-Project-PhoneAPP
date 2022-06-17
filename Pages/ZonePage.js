@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   FlatList,
 } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 import { useFonts } from "expo-font";
 import CollectionList from "../componants/ZonePage/CollectionList";
@@ -70,7 +71,7 @@ const ZonePage = ({ navigation }) => {
       <View></View>
 
       <Text style={styles.title}>Description</Text>
-      <ScrollView style={{ backgroundColor: "white" }}>
+      <ScrollView style={{position : "relative"}} showsVerticalScrollIndicator={false}>
         <Text style={styles.desc}>
           Bienvenue à Oran, ville de la Méditérranée, la ville ou il fait bon
           vivre. Oran est une ville chargé d’histoire avec ses monuments, ses
@@ -89,11 +90,23 @@ const ZonePage = ({ navigation }) => {
           Moulay Abdelkader al-Jilani. L’agglomération s’étend de part et
           d’autre du ravin de l’oued Rhi, maintenant couvert.
         </Text>
+        
       </ScrollView>
-
+      <LinearGradient
+        colors={["transparent", "rgba(15,15,15,0.6)"]}
+        style={{
+          width: "120%",
+          height: 100,
+          position: "absolute",
+          bottom : "0%"
+        }}
+      ></LinearGradient>
       <TouchableOpacity ctiveOpacity={0.9} style={styles.btn}>
         <Text style={styles.btnText}>Explorer</Text>
       </TouchableOpacity>
+ 
+      
+
     </SafeAreaView>
   );
 };
@@ -147,6 +160,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: "absolute",
     bottom: "3%",
+    // zIndex: 600,
   },
   btnText: {
     color: "#FFFFFF",
@@ -176,7 +190,7 @@ const styles = StyleSheet.create({
   },
   backBtn: {
     position: "absolute",
-    left : 25 , 
+    left: 25,
     alignSelf: "flex-start",
     top: "6.5%",
   },
@@ -186,6 +200,5 @@ const styles = StyleSheet.create({
     alignSelf: "flex-end",
     top: "6.5%",
   },
-  collectionList: {
-  },
+  collectionList: {},
 });
