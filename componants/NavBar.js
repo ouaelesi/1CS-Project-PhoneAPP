@@ -24,8 +24,9 @@ const navitmes = [
     icon: "person-outline",
   },
 ];
-const NavBar = ({ navigation, activePag }) => {
-  const [activePage, setActivepage] = useState("HomePage");
+const NavBar = ({ navigation, ActivePage }) => {
+  const [activePage, setActivepage] = useState(ActivePage);
+  console.log(activePage)
   return (
     <View style={styles.navContainer}>
       {navitmes.map((itm, key) => (

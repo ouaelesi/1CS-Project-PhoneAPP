@@ -1,4 +1,4 @@
-import { View, Image, Text, TouchableOpacity } from "react-native";
+import { View, Image, Text, TouchableOpacity , StyleSheet} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 const ZoneCard = ({ navigation }) => {
@@ -7,23 +7,7 @@ const ZoneCard = ({ navigation }) => {
       onPress={() => navigation.navigate("ZonePage", { name: "ZonePage" })}
     >
       <View
-        style={{
-          marginRight: 20,
-          padding: 3,
-          paddingHorizontal :5 , 
-          borderRadius: 30,
-          backgroundColor: "#F2F2F2", 
-          shadowColor: "#000",
-          shadowOffset: {
-            width: 0,
-            height: 1,
-          },
-          shadowOpacity: 0.12,
-          shadowRadius: 30.22,
-          elevation: 5,
-          position: "relative",
-          marginBottom:3
-        }}
+        style={Styles.container}
       >
         <Image
           source={require("../../assets/ZoneImg.png")}
@@ -76,5 +60,25 @@ const ZoneCard = ({ navigation }) => {
     </TouchableOpacity>
   );
 };
+
+const Styles = StyleSheet.create({
+  container : {
+    marginRight: 20,
+    padding: 3,
+    paddingHorizontal :5 , 
+    borderRadius: 30,
+    backgroundColor: "#F2F2F2", 
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.12,
+    shadowRadius: 30.22,
+    elevation: 5,
+    position: "relative",
+    marginBottom:3
+  }
+})
 
 export default ZoneCard;

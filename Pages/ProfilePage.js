@@ -6,7 +6,7 @@ const ProfilePage = ({navigation}) => {
     return (
         <View style={{paddingTop:80  , flex: 1}}>
             <Text>Profil Page</Text>
-            <NavBar  navigation={navigation} />
+            <NavBar  navigation={navigation} ActivePage={"ProfilePage"} />
         </View>
     );
 };

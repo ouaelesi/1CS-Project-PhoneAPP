@@ -75,7 +75,7 @@ const HomePage = ({ navigation, ActivePag }) => {
         <View style={{ height: 80 }}></View>
       </ScrollView>
       {/* Nav Bar */}
-      <NavBar navigation={navigation} ActivePag={ActivePag} />
+      <NavBar navigation={navigation} ActivePage={"HomePage"} />
     </View>
   );
 };

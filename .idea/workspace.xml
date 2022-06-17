@@ -7,6 +7,7 @@
     <list default="true" id="1fd84437-aba3-4347-9f82-338b82f4caa6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/ExplorePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/ExplorePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/HomePage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/LoginScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/PointIntPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/PointIntPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/RegisterScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/RegisterScreen.js" afterDir="false" />
