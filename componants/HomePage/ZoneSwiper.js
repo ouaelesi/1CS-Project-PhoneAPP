@@ -26,7 +26,7 @@ const ZoneSwiper = ({ navigation }) => {
   return (
     <View style={{ marginTop: 5, paddingLeft: 20 ,}}>
       <Text style={{ fontSize: 20, fontWeight: "600", color: "#28333B" }}>
-        Categories
+        Best Zones 
       </Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row", marginTop: 10, padding: 4 }}>

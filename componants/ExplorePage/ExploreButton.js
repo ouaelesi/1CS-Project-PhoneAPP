@@ -38,7 +38,9 @@ const ExploreButton = (props) => {
         />
       )}
 
-      <View style={[styles.circle , {backgroundColor : props.borderColor}]}></View>
+      <View
+        style={[styles.circle, { backgroundColor: props.borderColor }]}
+      ></View>
     </TouchableOpacity>
   );
 };
@@ -67,12 +69,12 @@ const styles = StyleSheet.create({
     right: "5%",
   },
   circle: {
-    position : "absolute" ,
+    position: "absolute",
     width: 12,
     height: 12,
     borderRadius: 20,
     margin: 4,
-    right :5 ,
-    top :5
+    right: 5,
+    top: 5,
   },
 });

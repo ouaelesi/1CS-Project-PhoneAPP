@@ -57,8 +57,8 @@ const Styles = StyleSheet.create({
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.92,
-    shadowRadius: 5.22,
+    shadowOpacity: 0.12,
+    shadowRadius: 2.22,
     elevation: 10,
   },
   GoToMap: {

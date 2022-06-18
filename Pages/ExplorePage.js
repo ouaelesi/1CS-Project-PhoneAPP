@@ -95,12 +95,12 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins-Medium",
   },
   zoneGeoLogo: {
-    marginHorizontal: "2%",
+  
   },
   zoneGeoName: {
     fontFamily: "Poppins-Medium",
     position: "absolute",
-    right: "5%",
+    right: "0%",
   },
   btnContainer: {
     backgroundColor: "#F2F2F2",
