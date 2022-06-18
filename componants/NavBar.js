@@ -24,8 +24,9 @@ const navitmes = [
     icon: "person-outline",
   },
 ];
-const NavBar = ({ navigation, activePag }) => {
-  const [activePage, setActivepage] = useState("HomePage");
+const NavBar = ({ navigation, ActivePage }) => {
+  const [activePage, setActivepage] = useState(ActivePage);
+  console.log(activePage);
   return (
     <View style={styles.navContainer}>
       {navitmes.map((itm, key) => (
@@ -37,9 +38,14 @@ const NavBar = ({ navigation, activePag }) => {
         >
           <Ionicons
             name={itm.icon}
-            size={activePage === itm.linkTo ? 29 : 25}
+            size={activePage === itm.linkTo ? 27 : 25}
             color={`${activePage === itm.linkTo ? "#E17E01" : "white"}`}
           />
+          {activePage === itm.linkTo && (
+            <View
+              style={styles.navUnder}
+            ></View>
+          )}
         </Pressable>
       ))}
     </View>
@@ -73,6 +79,14 @@ const styles = StyleSheet.create({
   navItems: {
     color: "red",
   },
+  navUnder : {
+    backgroundColor: "#E17E01",
+    width: 15,
+    height: 5,
+    borderRadius: 20,
+    alignSelf: "center",
+    marginTop: 3,
+  }
 });
 
 export default NavBar;

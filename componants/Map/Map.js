@@ -1,8 +1,10 @@
-import { View , StyleSheet} from "react-native";
-import {useState , useEffect} from "react";
+import { View, StyleSheet ,Text } from "react-native";
+import { useState, useEffect } from "react";
 import MapView, { Circle, Marker } from "react-native-maps";
 
 const Map = () => {
+
+  // Map Style 
   const mapStyle = [
     {
       featureType: "all",
@@ -135,6 +137,10 @@ const Map = () => {
     },
   ];
 
+  // Display Zone after the click 
+  const [showed , setShowed] = useState(false) ; 
+
+
   const [lng, setLng] = useState(3.5);
   const [lat, setLat] = useState(35);
   const [zoom, setZoom] = useState(5);
@@ -145,56 +151,70 @@ const Map = () => {
 
   var loaded = false;
 
- 
-  useEffect(()=>{
-    if (!loaded){
-      fetch('http://walidthekraken.pythonanywhere.com/cartes/print',{
-        'methods':'GET',
-        headers : {
-           'content-type':'application/json'
-        }
+  useEffect(() => {
+    if (!loaded) {
+      fetch("http://walidthekraken.pythonanywhere.com/cartes/print", {
+        methods: "GET",
+        headers: {
+          "content-type": "application/json",
+        },
       })
-      .then(response => response.json())
-      .then((data) => {setCartes(data)})
-      .catch(error => console.log(error))
+        .then((response) => response.json())
+        .then((data) => {
+          setCartes(data);
+        })
+        .catch((error) => console.log(error));
     }
     loaded = true;
-  },[])
+  }, []);
 
-  useEffect(()=>{
-    setMarkers(cartes.map((carte)=><Marker key={carte.CarteId} coordinate={{latitude: carte.CarteLat,
-      longitude: carte.CarteLong}} pinColor={'black'}>
-    </Marker>))
-    
-    setCircles(cartes.map((carte)=><Circle key={carte.CarteId} center={{latitude: carte.CarteLat,
-      longitude: carte.CarteLong}} radius={carte.CartePerim} fillColor={'#22B2A995'}>
+  useEffect(() => {
+    setMarkers(
+      cartes.map((carte) => (
+        <Marker
+          key={carte.CarteId}
+          coordinate={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
+          pinColor={"#E17E01"}
+          fillColor={"#E17E01"}
+          onPress={() => console.log(carte.CarteLat)}
+        ></Marker>
+      ))
+    );
 
-    </Circle>))
-  },[cartes])
+    setCircles(
+      cartes.map((carte) => (
+        <Circle
+          key={carte.CarteId}
+          center={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
+          radius={carte.CartePerim}
+          fillColor={"black"}
+        ></Circle>
+      ))
+    );
+  }, [cartes]);
 
   return (
-      <MapView
-        style={styles.map}
-        region={{
-          latitude: lat,
-          longitude: lng,
-          latitudeDelta: 0.015,
-          longitudeDelta: 0.0121,
-          zoom : zoom
-        }}
-        customMapStyle={mapStyle}
-      >
-
-        {markers}
-        {circles}
-
-      </MapView>
+    <MapView
+      style={styles.map}
+      region={{
+        latitude: lat,
+        longitude: lng,
+        latitudeDelta: 9.915,
+        longitudeDelta: 15.9121,
+        zoom: zoom,
+      }}
+      customMapStyle={mapStyle}
+    >
+      {markers}
+      {circles}
+   
+    </MapView>
   );
 };
 const styles = StyleSheet.create({
   map: {
     ...StyleSheet.absoluteFillObject,
-    zIndex : -20 
+    zIndex: -20,
   },
 });
 export default Map;

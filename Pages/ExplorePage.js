@@ -37,26 +37,28 @@ const ExplorePage = ({ navigation }) => {
       <ZoneMap />
 
       <View style={styles.btnContainer}>
-        <View>
-          
+        <View style={styles.circlesContainer}>
+          <View style={[styles.circles , {backgroundColor : "#E17E01"}]}></View>
+          <View style={[styles.circles , {backgroundColor : "#BAB2A0"}]}></View>
+          <View style={[styles.circles , {backgroundColor : "#3C464D"}]}></View>
         </View>
         <View style={styles.rowButton}>
           <ExploreButton
-            text={"Choisir un\n point \nd'interet"}
+            text={"Choisir un \npoint \nd'interet"}
             color={"rgba(225,126,1,.3)"}
             borderColor={"#E17E01"}
             small={true}
             id={1}
-            linkTo ={"PointInt"}
+            linkTo={"PointInt"}
             navigation={navigation}
           />
           <ExploreButton
-            text={"Voir les\n événements \nà venir"}
+            text={"Voir les \névénements \nà venir"}
             color={"rgba(186,178,160,.5)"}
             borderColor={"#BAB2A0"}
             small={true}
             id={2}
-            linkTo ={"EventPage"}
+            linkTo={"EventPage"}
             navigation={navigation}
           />
         </View>
@@ -67,12 +69,12 @@ const ExplorePage = ({ navigation }) => {
           borderColor={"#3C464D"}
           small={false}
           id={3}
-          linkTo ={""}
+          linkTo={""}
           navigation={navigation}
         />
       </View>
 
-      <NavBar navigation={navigation} />
+      <NavBar navigation={navigation} ActivePage={"MapPage"} />
     </SafeAreaView>
   );
 };
@@ -93,12 +95,12 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins-Medium",
   },
   zoneGeoLogo: {
-    marginHorizontal: "2%",
+  
   },
   zoneGeoName: {
     fontFamily: "Poppins-Medium",
     position: "absolute",
-    right: "5%",
+    right: "0%",
   },
   btnContainer: {
     backgroundColor: "#F2F2F2",
@@ -109,16 +111,27 @@ const styles = StyleSheet.create({
     borderColor: "rgba(0, 0, 0, .1)",
     marginVertical: "4%",
     padding: "1.5%",
-    position: "relative" , 
-    
+    position: "relative",
+    paddingTop :25 , 
   },
   rowButton: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    
   },
   smallBtn: {
     width: "50%",
   },
+  circles : {
+    width : 12 , 
+    height :12 , 
+    borderRadius : 50 , 
+    margin : 4
+  } , 
+  circlesContainer : {
+    position : "absolute" , 
+    flexDirection : "row",
+    right :15 ,
+    top :5
+  }
 });

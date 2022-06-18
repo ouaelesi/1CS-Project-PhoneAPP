@@ -90,6 +90,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.12,
     shadowRadius: 10.22,
     elevation: 7,
+    borderWidth : 1 , 
+    borderColor : "rgba(0,0,0,.01)" ,
   },
   image: {
     alignSelf: "center",

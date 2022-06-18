@@ -13,7 +13,7 @@ const MapPage = ({ navigation }) => {
         <SearchFilter/>
         <Map/>
         <BestZones navigation={navigation}/>
-        <NavBar navigation={navigation} />
+        <NavBar navigation={navigation} ActivePage={"MapPage"} />
     </View>
   );
 };

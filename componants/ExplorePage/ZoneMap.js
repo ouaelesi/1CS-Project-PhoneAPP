@@ -1,5 +1,7 @@
-import { View , StyleSheet} from "react-native";
-import MapView from "react-native-maps";
+import { useState, useEffect } from "react";
+import { View, StyleSheet } from "react-native";
+
+import MapView, { Circle, Marker } from "react-native-maps";
 
 const Map = () => {
   const mapStyle = [
@@ -133,36 +135,87 @@ const Map = () => {
       ],
     },
   ];
+
+  const [cartes, setCartes] = useState([]);
+  const [markers, setMarkers] = useState([]);
+  const [circles, setCircles] = useState([]);
+
+  let dataLoaded = false;
+
+  useEffect(() => {
+    if (!dataLoaded) {
+      fetch("http://walidthekraken.pythonanywhere.com/cartes/print", {
+        methods: "GET",
+        headers: {
+          "content-type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          setCartes(data);
+        })
+        .catch((error) => console.log(error));
+    }
+    dataLoaded = true;
+  }, []);
+
+  useEffect(() => {
+    setMarkers(
+      cartes.map((carte) => (
+        <Marker
+          key={carte.CarteId}
+          coordinate={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
+          pinColor={"#E17E01"}
+          fillColor={"#E17E01"}
+          onPress={() => console.log(carte.CarteLat)}
+        ></Marker>
+      ))
+    );
+
+    setCircles(
+      cartes.map((carte) => (
+        <Circle
+          key={carte.CarteId}
+          center={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
+          radius={carte.CartePerim}
+          fillColor={"black"}
+        ></Circle>
+      ))
+    );
+  }, [cartes]);
+
   return (
     <View style={styles.mapContainer}>
       <MapView
         style={styles.map}
         region={{
-          latitude: 37.78825,
-          longitude: -122.4324,
+          latitude: 35,
+          longitude: 3.5,
           latitudeDelta: 0.015,
-          longitudeDelta: 0.0121,
+          longitudeDelta: 8.9121,
+          zoom: 5,
         }}
         customMapStyle={mapStyle}
-      ></MapView>
+      >
+        {markers}
+        {circles}
+      </MapView>
     </View>
   );
 };
 const styles = StyleSheet.create({
-    mapContainer: {
-        width : "95%",
-        height: "25%",
-        alignSelf: 'center',
-        alignItems: 'center',
-        marginTop: '2%',
-       // borderRadius: 50,
-       // overflow: 'hidden',
-
-    },
-     map: {
-        height: '100%',
-        width: '100%',
-        
+  mapContainer: {
+    width: "95%",
+    height: "25%",
+    alignSelf: "center",
+    alignItems: "center",
+    marginTop: "2%",
+    // borderRadius: 50,
+    // overflow: 'hidden',
+  },
+  map: {
+    height: "100%",
+    width: "100%",
   },
 });
 export default Map;
