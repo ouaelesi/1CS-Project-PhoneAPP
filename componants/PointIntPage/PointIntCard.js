@@ -1,8 +1,9 @@
-import { View, Image, Text, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet , TouchableOpacity } from "react-native";
 
 const PointIntCard = (props) => {
   return (
-    <View style={styles.container}>
+      <TouchableOpacity style={styles.container} onPress={()=>props.navigation.navigate("CommentPage" , {name : "CommentPage"})}>
+ <View  >
       <Image
         source={require("../../assets/PointIntPage/images/musee.png")}
         style={styles.image}
@@ -69,6 +70,8 @@ const PointIntCard = (props) => {
           <Image source={require('../../assets/heart.svg')} style={{width:20 ,height:20}}></Image>
       </View> */}
     </View>
+      </TouchableOpacity>
+   
   );
 };
 
@@ -91,7 +94,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10.22,
     elevation: 7,
     borderWidth : 1 , 
-    borderColor : "rgba(0,0,0,.01)" ,
+    borderColor : "rgba(0,0,0,.03)" ,
   },
   image: {
     alignSelf: "center",

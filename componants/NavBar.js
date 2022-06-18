@@ -16,7 +16,7 @@ const navitmes = [
     icon: "home-outline",
   },
   {
-    linkTo: "PointInt",
+    linkTo: "CommentPage",
     icon: "notifications-outline",
   },
   {

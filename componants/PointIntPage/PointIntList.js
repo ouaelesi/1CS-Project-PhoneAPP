@@ -41,10 +41,11 @@ const DATA = [
 // const Item = ({ title }) => (   <View style={styles.item}>     <Text
 // style={styles.title}>{title}</Text>   </View> );
 
-const Item = () => (<PointIntCard/>);
 
-const PointIntList = () => {
-    const renderItem = ({item}) => (<Item title={item.title}/>);
+
+const PointIntList = ({navigation}) => {
+    const Item = () => (  <PointIntCard navigation={navigation}/>);
+    const renderItem = ({item}) => (<Item title={item.title} />);
 
     return (
         <SafeAreaView style={styles.container}>
@@ -54,8 +55,10 @@ const PointIntList = () => {
                 numColumns={2}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
+               
                 columnWrapperStyle={{
                 justifyContent: 'space-around'
+                
             }}/>
         </SafeAreaView>
     );
