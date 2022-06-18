@@ -69,7 +69,7 @@ const Styles = StyleSheet.create({
     borderRadius: 30,
     backgroundColor: "#F2F2F2", 
     borderWidth : 1 , 
-    borderColor : "rgba(0,0,0,.01)" , 
+    borderColor : "rgba(0,0,0,.03)" , 
     shadowColor: "#000",
     shadowOffset: {
       width: 0,

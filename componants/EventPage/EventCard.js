@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
 
     position: "relative",
     borderWidth: 1,
-    borderColor: "rgba(0,0,0,.01)",
+    borderColor: "rgba(0,0,0,.03)",
   },
   information: {
     flex: 3,

@@ -5,7 +5,7 @@ import DropDown from "../componants/PointIntPage/Dropdown";
 import CityCard from "../componants/CityCard";
 import { LinearGradient } from "expo-linear-gradient";
 
-const PointIntPage = () => {
+const PointIntPage = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <CityCard />
@@ -66,7 +66,7 @@ const PointIntPage = () => {
           Points d'interêts
         </Text>
 
-        <PointIntList />
+        <PointIntList navigation={navigation}/>
       </View>
       <LinearGradient
         colors={["transparent", "rgba(15,15,15,0.7)"]}

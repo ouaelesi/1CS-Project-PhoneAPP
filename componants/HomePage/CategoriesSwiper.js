@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     shadowRadius: 30.22,
     elevation: 5,
     borderWidth : 1 , 
-    borderColor : "rgba(0,0,0,.01)" ,
+    borderColor : "rgba(0,0,0,.05)" ,
   },
 });
 
