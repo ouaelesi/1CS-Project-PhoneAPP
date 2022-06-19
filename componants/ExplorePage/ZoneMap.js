@@ -155,63 +155,57 @@ const Map = () => {
         .then((response) => response.json())
         .then((data) => {
           setCartes(data);
-          data.map((d)=>{
-            if (d.CarteId==32){
-              setCurrentCard(d)
+          data.map((d) => {
+            if (d.CarteId == 32) {
+              setCurrentCard(d);
             }
-          })
+          });
         })
         .catch((error) => console.log(error));
     }
-      fetch("http://walidthekraken.pythonanywhere.com/points/print", {
-          methods: "GET",
-          headers: {
-            "content-type": "application/json",
-          },
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            data.map((p)=>{
-              if(p.CarteId==32)
-              points.push(p);
-            });
-          })
-          .catch((error) => console.log(error));
-    console.log(points)
-    setCurrentPoints(points)
+    fetch("http://walidthekraken.pythonanywhere.com/points/print", {
+      methods: "GET",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        data.map((p) => {
+          if (p.CarteId == 32) points.push(p);
+        });
+      })
+      .catch((error) => console.log(error));
+    console.log(points);
+    setCurrentPoints(points);
     dataLoaded = true;
-
-
   }, []);
 
   useEffect(() => {
     setMarkers(
-      points.map((point) => 
-        
-          <Marker
+      points.map((point) => (
+        <Marker
           key={point.PointId}
           coordinate={{ latitude: point.PointLat, longitude: point.PointLong }}
           pinColor={"#E17E01"}
           fillColor={"#E17E01"}
           onPress={() => console.log(point.PointLat)}
-          ></Marker>
-        
-      
-      ));
+        ></Marker>
+      ))
+    );
 
-    
     setCircles(
       cartes.map((carte) => {
-        if (carte.CarteId==32) {
-
-         return <Circle
-          key={carte.CarteId}
-          center={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
-          radius={carte.CartePerim}
-          fillColor={"rgba(0,0,0,0.12)"}
-        ></Circle>
+        if (carte.CarteId == 32) {
+          return (
+            <Circle
+              key={carte.CarteId}
+              center={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
+              radius={carte.CartePerim}
+              fillColor={"rgba(0,0,0,0.12)"}
+            ></Circle>
+          );
         }
-        
       })
     );
   }, [points]);
@@ -221,8 +215,8 @@ const Map = () => {
       <MapView
         style={styles.map}
         region={{
-          latitude: currentCard?currentCard.CarteLat :35,
-          longitude: currentCard?currentCard.CarteLong : 3.5,
+          latitude: currentCard ? currentCard.CarteLat : 35,
+          longitude: currentCard ? currentCard.CarteLong : 3.5,
           latitudeDelta: 0.015,
           longitudeDelta: 0.1721,
           zoom: 5,
@@ -231,7 +225,6 @@ const Map = () => {
       >
         {markers}
         {circles}
-      
       </MapView>
     </View>
   );
@@ -243,8 +236,8 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     alignItems: "center",
     marginTop: "2%",
-    // borderRadius: 50,
-    // overflow: 'hidden',
+    borderRadius: 20,
+    overflow: "hidden",
   },
   map: {
     height: "100%",

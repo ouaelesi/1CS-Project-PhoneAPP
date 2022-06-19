@@ -1,16 +1,9 @@
-import { View, StyleSheet, Text } from "react-native";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet } from "react-native";
 import MapView, { Circle, Marker, Callout } from "react-native-maps";
-import ZoneCard from "../HomePage/ZoneCard";
+import CircuitInfos from "./CircuitInfos";
 
-import MapViewDirections from "react-native-maps-directions";
-
-const Map = ({ navigation }) => {
-  const coordinates = [
-    { latitude: 37.3318456, longitude: -122.0296002 },
-    { latitude: 37.771707, longitude: -122.4053769 },
-  ];
-  // Map Style
+const MapCircuit = () => {
   const mapStyle = [
     {
       featureType: "all",
@@ -143,17 +136,14 @@ const Map = ({ navigation }) => {
     },
   ];
 
-  const [lng, setLng] = useState(3.5);
-  const [lat, setLat] = useState(35);
-  const [zoom, setZoom] = useState(5);
-
   const [cartes, setCartes] = useState([]);
   const [markers, setMarkers] = useState([]);
   const [circles, setCircles] = useState([]);
-  var loaded = false;
+
+  let dataLoaded = false;
 
   useEffect(() => {
-    if (!loaded) {
+    if (!dataLoaded) {
       fetch("http://walidthekraken.pythonanywhere.com/cartes/print", {
         methods: "GET",
         headers: {
@@ -166,7 +156,7 @@ const Map = ({ navigation }) => {
         })
         .catch((error) => console.log(error));
     }
-    loaded = true;
+    dataLoaded = true;
   }, []);
 
   useEffect(() => {
@@ -180,7 +170,7 @@ const Map = ({ navigation }) => {
           onPress={() => console.log(carte.CarteLat)}
         >
           <Callout tooltip>
-            <ZoneCard navigation={navigation} />
+            <Text>Ouael</Text>
           </Callout>
         </Marker>
       ))
@@ -192,42 +182,70 @@ const Map = ({ navigation }) => {
           key={carte.CarteId}
           center={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
           radius={carte.CartePerim}
-          fillColor={"rgba(0,0,0,0.5)"}
+          fillColor={"rgba(0,0,0,0.3)"}
         ></Circle>
       ))
     );
   }, [cartes]);
 
   return (
-    <MapView
-      style={styles.map}
-      region={{
-        latitude: lat,
-        longitude: lng,
-        latitudeDelta: 9.915,
-        longitudeDelta: 15.9121,
-        zoom: zoom,
-      }}
-      customMapStyle={mapStyle}
-    >
-      {markers}
-      {circles}
-
-      <MapViewDirections
-        origin={coordinates[0]}
-        destination={coordinates[1]}
-        strockWidth={13}
-        const
-        apikey=""
-        strockColor="red"
-      />
-    </MapView>
+    <View style={Styles.mapContainer}>
+      <MapView
+        style={Styles.map}
+        region={{
+          latitude: 35,
+          longitude: 3.5,
+          latitudeDelta: 0.015,
+          longitudeDelta: 8.9121,
+          zoom: 5,
+        }}
+        customMapStyle={mapStyle}
+      >
+        {markers}
+        {circles}
+      </MapView>
+      <View style={{ width: "28%" }}>
+        <CircuitInfos
+          color={"#8F8B81"}
+          bgColor={"rgba(143,139,129,.3)"}
+          text={"Points"}
+          value={40}
+          unit={"pts"}
+        />
+        <CircuitInfos
+          color={"#E17E01"}
+          bgColor={"rgba(225,126,1,.3)"}
+          text={"Durée"}
+          value={45}
+          unit={"KM"}
+        />
+        <CircuitInfos
+          color={"#3C464D"}
+          bgColor={"rgba(40,51,59 , .3)"}
+          text={"Distance"}
+          value={120}
+          unit={"KM"}
+        />
+      </View>
+    </View>
   );
 };
-const styles = StyleSheet.create({
+
+const Styles = StyleSheet.create({
+  mapContainer: {
+    width: "100%",
+    height: 300,
+    alignSelf: "center",
+    alignItems: "center",
+    marginTop: "2%",
+    borderRadius: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
   map: {
-    ...StyleSheet.absoluteFillObject,
-    zIndex: -20,
+    height: "100%",
+    width: "70%",
   },
 });
-export default Map;
+
+export default MapCircuit;
