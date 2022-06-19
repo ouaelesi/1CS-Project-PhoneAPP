@@ -1,83 +1,81 @@
-import { Text, StyleSheet, View, Image } from "react-native";
+import { Text, StyleSheet, View, Image, ScrollView } from "react-native";
 import NavBar from "../componants/NavBar";
 import CategoriesSwiper from "../componants/HomePage/CategoriesSwiper";
 import ZoneSwiper from "../componants/HomePage/ZoneSwiper";
 import GoTOMap from "../componants/HomePage/GoTOMap";
+import { Ionicons } from "@expo/vector-icons";
 
-const HomePage = ({ navigation }) => {
+const HomePage = ({ navigation, ActivePag }) => {
   return (
     <View
       style={{
         flex: 1,
-        paddingTop: 50,
+        paddingTop: 40,
         backgroundColor: "white",
       }}
     >
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          paddingTop: 5,
-          paddingHorizontal:20 , 
-        }}
-      >
-        <View style={{ flexDirection: "row" }}>
-          <Image
-            source={require("../assets/profil.png")}
-            style={{ width: 40, height: 40 }}
-          ></Image>
+      <ScrollView>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            paddingTop: 3,
+            paddingHorizontal: 20,
+          }}
+        >
+          <View style={{ flexDirection: "row" }}>
+            <Image
+              source={require("../assets/profil.png")}
+              style={{ width: 40, height: 40 }}
+            ></Image>
+            <Text
+              style={{
+                fontSize: 30,
+                marginLeft: 20,
+                color: "#28333B",
+              }}
+            >
+              Hi, Ouael
+            </Text>
+          </View>
+
+          <View>
+            <Ionicons name="search" size={33} color="black" />
+          </View>
+        </View>
+        <View style={{ paddingTop: 20, paddingHorizontal: 20 }}>
           <Text
             style={{
-              fontSize: 30,
-              fontWeight: "semibold",
-              marginLeft: 20,
+              fontSize: 32,
+              fontWeight: "bold",
               color: "#28333B",
             }}
           >
-            Hi, Ouael
+            Let’s Discover Algeria
+            <View
+              style={{
+                width: 120,
+                height: 12,
+                backgroundColor: "#E17E01",
+                position: "absolute",
+                right: 0,
+                bottom: 0,
+                borderRadius: 20,
+              }}
+            />
           </Text>
         </View>
 
-        <View>
-          <Image
-            source={require("../assets/search.svg")}
-            style={{ width: 35, height: 35, marginRight: 10 }}
-          ></Image>
-        </View>
-      </View>
-      <View style={{ paddingTop: 20 ,  paddingHorizontal:20 ,  }}>
-        <Text
-          style={{
-            fontSize: 32,
-            fontWeight: "bold",
-            color: "#28333B",
-          }}
-        >
-          Let’s Discover Algeria!
-          <View
-            style={{
-              width: 120,
-              height: 12,
-              backgroundColor: "#E17E01",
-              position: "absolute",
-              right: 0,
-              bottom: 0,
-              borderRadius: 20,
-              
-            }}
-          />
-        </Text>
-      </View>
+        {/* Categories Swiper  */}
+        <CategoriesSwiper />
+        {/* Zones Swiper */}
+        <ZoneSwiper navigation={navigation} />
 
-      {/* Categories Swiper  */}
-      <CategoriesSwiper />
-
-      {/* Zones Swiper */}
-      <ZoneSwiper />
-
-      <GoTOMap />
-
-      <NavBar navigation={navigation} />
+        <GoTOMap navigation={navigation} />
+        <View style={{ height: 80 }}></View>
+      </ScrollView>
+      {/* Nav Bar */}
+      <NavBar navigation={navigation} ActivePage={"HomePage"} />
     </View>
   );
 };

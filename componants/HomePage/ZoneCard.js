@@ -1,62 +1,86 @@
-import { View, Image, Text } from "react-native";
+import { View, Image, Text, TouchableOpacity , StyleSheet} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
-const ZoneCard = (props) => {
+const ZoneCard = ({ navigation }) => {
   return (
-    <View
-      style={{
-        marginRight: 20,
-        padding: 8,
-        borderRadius: 30,
-        backgroundColor : "#F2F2f9",
-        shadowColor: "#000",
-        shadowOffset: {
-          width: 0,
-          height: 0,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 8 ,
-        position : "relative"
-   
-      }}
+    <TouchableOpacity
+      onPress={() => navigation.navigate("ZonePage", { name: "ZonePage" })}
     >
-      <Image
-        source={require("../../assets/ZoneImg.png")}
-        style={{ widht: 150, height: 120, borderRadius: 25 }}
-      ></Image>
       <View
-        style={{
-          flexDirection: "row",
-          padding: 10,
-          paddingTop: 5,
-          justifyContent: "space-between",
-        }}
+        style={Styles.container}
       >
-        <View>
-          <Text style={{ fontSize: 28, fontWeight: "600" }}>Oran</Text>
-          <Text>Rue de Wlad Fayet</Text>
+        <Image
+          source={require("../../assets/ZoneImg.png")}
+          style={{ width: 250, height: 135, borderRadius: 25}}
+        ></Image>
+        <View
+          style={{
+            flexDirection: "row",
+            padding: 10,
+            paddingTop: 5,
+            justifyContent: "space-between",
+          }}
+        >
+          <View>
+            <Text style={{ fontSize: 22, fontWeight: "600" }}>Oran</Text>
+            <Text style={{fontSize : 12}}>Rue de Wlad Fayet</Text>
+          </View>
+          <View
+            style={{
+              backgroundColor: "#E17E01",
+              width: 55,
+              height: 25,
+              borderRadius: 20,
+              marginTop: 15,
+              flexDirection: "row",
+              padding: 4,
+              paddingLeft: 8,
+            }}
+          >
+            <Ionicons name="star-outline" size={15} color="white" />
+            <Text style={{ color: "white", marginLeft: 3 , fontSize:12}}>4.6</Text>
+          </View>
         </View>
         <View
           style={{
-            backgroundColor: "#E17E01",
-            width: 60,
-            height: 30,
+            backgroundColor: "rgba(15,15,15,0.5)",
+            width: 40,
+            height: 40,
+            position: "absolute",
+            top: 13,
+            right: 13,
             borderRadius: 20,
-            marginTop: 20,
-            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-around",
           }}
         >
-          <Image
-            source={require("../../assets/star.svg")}
-            style={{ width: 20, height: 20, marginLeft: 8, marginTop: 3 }}
-          />
-          <Text style={{ color: "white", padding: 4 }}>4.6</Text>
+          <Ionicons name="heart-outline" size={25} color="white" />
         </View>
       </View>
-      <View style={{backgroundColor:"rgba(15,15,15,0.5)" ,width:40 ,height:40 , position:"absolute" , top: 13, right : 13 , borderRadius : 20 , alignItems:"center" , justifyContent:"space-around"}}>
-          <Image source={require('../../assets/heart.svg')} style={{width:20 ,height:20}}></Image>
-      </View>
-    </View>
+    </TouchableOpacity>
   );
 };
+
+const Styles = StyleSheet.create({
+  container : {
+    marginRight: 20,
+    padding: 3,
+    paddingHorizontal :5 , 
+    borderRadius: 30,
+    backgroundColor: "#F2F2F2", 
+    borderWidth : 1 , 
+    borderColor : "rgba(0,0,0,.03)" , 
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.12,
+    shadowRadius: 30.22,
+    elevation: 5,
+    position: "relative",
+    marginBottom:3
+  }
+})
 
 export default ZoneCard;

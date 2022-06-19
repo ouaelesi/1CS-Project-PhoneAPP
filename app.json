@@ -24,15 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      } , 
-      "config" : {
-        "googleMaps" : {
-          "apiKey" : "AIzaSyAPYgjHionHtDX_rWarUGBSMkuksKxOgbU" 
+      },
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAPYgjHionHtDX_rWarUGBSMkuksKxOgbU"
         }
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

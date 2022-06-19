@@ -1,5 +1,5 @@
 import { ScrollView, View, Text } from "react-native";
-
+import { Ionicons } from "@expo/vector-icons";
 const SearchFilter = () => {
   const filterOptions = [
     "select type",
@@ -12,19 +12,22 @@ const SearchFilter = () => {
     <View style={{ flexDirection: "row", marginTop: 10,paddingLeft:20 }}>
       <View
         style={{
-          backgroundColor: "#28333B",
+          backgroundColor: "rgba(40,51,59,0.9)",
           borderRadius: 50,
           width: 35,
           height: 35,
         }}
-      ></View>
+        
+      >
+        <Ionicons name="filter" size={20} color="white" style={{alignSelf:"center" , marginTop:8}}/>
+      </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <View style={{ flexDirection: "row" }}>
           {filterOptions.map((option, key) => (
             <View
               key={key}
               style={{
-                backgroundColor: "#28333B",
+                backgroundColor: "rgba(40,51,59,0.9)",
                 borderRadius: 50,
                 marginLeft: 10,
                 height: 35,

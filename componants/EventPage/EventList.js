@@ -7,7 +7,7 @@ import {
     Text,
     StatusBar
 } from 'react-native';
-import PointIntCard from '../PointIntPage/PointIntCard';
+import EventCard from '../EventPage/EventCard';
 
 const DATA = [
     {
@@ -31,35 +31,27 @@ const DATA = [
     }, {
         id: '7',
         title: 'Third Item'
+    }, {
+        id: '8',
+        title: 'Third Item'
     }
-    , {
-      id: '8',
-      title: 'Third Item'
-  }
 ];
 
 // const Item = ({ title }) => (   <View style={styles.item}>     <Text
 // style={styles.title}>{title}</Text>   </View> );
 
+const Item = () => (<EventCard/>);
 
-
-const PointIntList = ({navigation}) => {
-    const Item = () => (  <PointIntCard navigation={navigation}/>);
-    const renderItem = ({item}) => (<Item title={item.title} />);
+const EventList = () => {
+    const renderItem = ({item}) => (<Item title={item.title}/>);
 
     return (
         <SafeAreaView style={styles.container}>
             <FlatList
-                showsVerticalScrollIndicator={false}
                 data={DATA}
-                numColumns={2}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
-               
-                columnWrapperStyle={{
-                justifyContent: 'space-around'
-                
-            }}/>
+          />
         </SafeAreaView>
     );
 }
@@ -67,14 +59,15 @@ const PointIntList = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        marginTop: StatusBar.currentHeight || 0
     },
     item: {
-        backgroundColor: '#f9c2ff',
-        padding: 0
+ 
+       margin: 0
     },
     title: {
         fontSize: 32
     }
 });
 
-export default PointIntList;
+export default EventList;

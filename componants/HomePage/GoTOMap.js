@@ -1,41 +1,73 @@
-import { View, ImageBackground, Text , Image } from "react-native";
-import { LinearGradient } from 'expo-linear-gradient';
+import {
+  View,
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { Ionicons } from "@expo/vector-icons";
 
-const GoTOMap = () => {
+const GoTOMap = ({ navigation }) => {
   return (
-    <View
-      style={{
-        width: "80%",
-        height: 160,
-        alignSelf : "center" , 
-        marginTop: 15,
-        borderRadius: 40,
-        borderColor : "#E17E01",
-        borderWidth:2,
-        shadowColor: "#000",
-        shadowOffset: {
-          width: 0,
-          height: 0,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 5 ,
-      }}
+    <TouchableOpacity
+      onPress={() => navigation.navigate("MapPage", { name: "MapPage" })}
     >
-      <ImageBackground
-        source={require("../../assets/map.png")}
-        style={{ flex: 1, justifyContent: "center" }}
-        imageStyle={{ borderRadius: 40 }}
-      >
-          <LinearGradient colors={['transparent', 'rgba(15,15,15,0.6)']} style={{width : "100%" , height:"100%" ,borderRadius:38 , justifyContent :"space-around"}}>
-             <View>
-             <Image source={require('../../assets/WhiteSearch.svg')} style={{width:40 , height:40 , marginHorizontal :"auto"}}></Image>
-              <Text style={{textAlign:"center"  ,fontSize : 25 , fontWeight:"500" , marginTop : 7 , color : "white"}}>Go To Map</Text>
-             </View>
-              
+      <View style={Styles.container}>
+        <ImageBackground
+          source={require("../../assets/map.png")}
+          style={{ flex: 1, justifyContent: "center" }}
+          imageStyle={{ borderRadius: 40 }}
+        >
+          <LinearGradient
+            colors={["transparent", "rgba(15,15,15,0.6)"]}
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: 38,
+              justifyContent: "space-around",
+            }}
+          >
+            <View>
+              <Ionicons
+                name="search"
+                size={45}
+                style={{ alignSelf: "center" }}
+                color="white"
+              />
+              <Text style={Styles.GoToMap}>Go To Map</Text>
+            </View>
           </LinearGradient>
-      </ImageBackground>
-    </View>
+        </ImageBackground>
+      </View>
+    </TouchableOpacity>
   );
 };
+const Styles = StyleSheet.create({
+  container: {
+    width: "80%",
+    height: 140,
+    alignSelf: "center",
+    marginTop: 15,
+    borderRadius: 40,
+    borderColor: "#E17E01",
+    borderWidth: 1,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.12,
+    shadowRadius: 2.22,
+    elevation: 10,
+  },
+  GoToMap: {
+    textAlign: "center",
+    fontSize: 25,
+    fontWeight: "500",
+    marginTop: 5,
+    color: "white",
+  },
+});
 
 export default GoTOMap;

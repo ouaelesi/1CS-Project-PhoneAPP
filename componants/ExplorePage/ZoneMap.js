@@ -1,11 +1,9 @@
-import { View, StyleSheet ,Text } from "react-native";
 import { useState, useEffect } from "react";
+import { View, StyleSheet } from "react-native";
+
 import MapView, { Circle, Marker } from "react-native-maps";
 
-
 const Map = () => {
-
-  // Map Style 
   const mapStyle = [
     {
       featureType: "all",
@@ -138,17 +136,16 @@ const Map = () => {
     },
   ];
 
-  const [lng, setLng] = useState(3.5);
-  const [lat, setLat] = useState(35);
-  const [zoom, setZoom] = useState(5);
-
   const [cartes, setCartes] = useState([]);
   const [markers, setMarkers] = useState([]);
   const [circles, setCircles] = useState([]);
-  var loaded = false;
+  const [points, setCurrentPoints] = useState([]);
+  const [currentCard, setCurrentCard] = useState([]);
+
+  let dataLoaded = false;
 
   useEffect(() => {
-    if (!loaded) {
+    if (!dataLoaded) {
       fetch("http://walidthekraken.pythonanywhere.com/cartes/print", {
         methods: "GET",
         headers: {
@@ -158,59 +155,100 @@ const Map = () => {
         .then((response) => response.json())
         .then((data) => {
           setCartes(data);
+          data.map((d)=>{
+            if (d.CarteId==32){
+              setCurrentCard(d)
+            }
+          })
         })
         .catch((error) => console.log(error));
     }
-    loaded = true;
+      fetch("http://walidthekraken.pythonanywhere.com/points/print", {
+          methods: "GET",
+          headers: {
+            "content-type": "application/json",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            data.map((p)=>{
+              if(p.CarteId==32)
+              points.push(p);
+            });
+          })
+          .catch((error) => console.log(error));
+    console.log(points)
+    setCurrentPoints(points)
+    dataLoaded = true;
+
+
   }, []);
 
   useEffect(() => {
     setMarkers(
-      cartes.map((carte) => (
-        <Marker
-          key={carte.CarteId}
-          coordinate={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
+      points.map((point) => 
+        
+          <Marker
+          key={point.PointId}
+          coordinate={{ latitude: point.PointLat, longitude: point.PointLong }}
           pinColor={"#E17E01"}
           fillColor={"#E17E01"}
-          onPress={() => console.log(carte.CarteLat)}
-        ></Marker>
-      ))
-    );
+          onPress={() => console.log(point.PointLat)}
+          ></Marker>
+        
+      
+      ));
 
+    
     setCircles(
-      cartes.map((carte) => (
-        <Circle
+      cartes.map((carte) => {
+        if (carte.CarteId==32) {
+
+         return <Circle
           key={carte.CarteId}
           center={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
           radius={carte.CartePerim}
-          fillColor={"rgba(0,0,0,0.5)"}
+          fillColor={"rgba(0,0,0,0.12)"}
         ></Circle>
-      ))
+        }
+        
+      })
     );
-  }, [cartes]);
+  }, [points]);
 
   return (
-    <MapView
-      style={styles.map}
-      region={{
-        latitude: lat,
-        longitude: lng,
-        latitudeDelta: 9.915,
-        longitudeDelta: 15.9121,
-        zoom: zoom,
-      }}
-      customMapStyle={mapStyle}
-    >
-      {markers}
-      {circles}
-   
-    </MapView>
+    <View style={styles.mapContainer}>
+      <MapView
+        style={styles.map}
+        region={{
+          latitude: currentCard?currentCard.CarteLat :35,
+          longitude: currentCard?currentCard.CarteLong : 3.5,
+          latitudeDelta: 0.015,
+          longitudeDelta: 0.1721,
+          zoom: 5,
+        }}
+        customMapStyle={mapStyle}
+      >
+        {markers}
+        {circles}
+      
+      </MapView>
+    </View>
   );
 };
 const styles = StyleSheet.create({
+  mapContainer: {
+    width: "95%",
+    height: "25%",
+    alignSelf: "center",
+    alignItems: "center",
+    marginTop: "2%",
+    // borderRadius: 50,
+    // overflow: 'hidden',
+  },
   map: {
-    ...StyleSheet.absoluteFillObject,
-    zIndex: -20,
+    height: "100%",
+    width: "100%",
   },
 });
 export default Map;

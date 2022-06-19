@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1fd84437-aba3-4347-9f82-338b82f4caa6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/ExplorePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/ExplorePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/ProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/EventPage/EventCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/EventPage/EventCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/ExplorePage/ExploreButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/ExplorePage/ExploreButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/ExplorePage/ZoneMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/ExplorePage/ZoneMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/HomePage/CategoriesSwiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/HomePage/CategoriesSwiper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/HomePage/GoTOMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/HomePage/GoTOMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/HomePage/ZoneCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/HomePage/ZoneCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/HomePage/ZoneSwiper.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/HomePage/ZoneSwiper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/Map/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/Map/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componants/PointIntPage/PointIntCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/componants/PointIntPage/PointIntCard.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2A59hAmErM4dajUTX6yO252D3ua" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1fd84437-aba3-4347-9f82-338b82f4caa6" name="Default Changelist" comment="" />
+      <created>1654288699610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654288699610</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="93" y="93" width="1350" height="678" key="AVDManager" timestamp="1655508768685">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="93" y="93" width="1350" height="678" key="AVDManager/0.0.1536.864@0.0.1536.864" timestamp="1655508768685" />
+    <state x="543" y="181" key="FileChooserDialogImpl" timestamp="1654439796923">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="543" y="181" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1654439796923" />
+    <state x="271" y="86" key="SettingsEditor" timestamp="1654440700212">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="271" y="86" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1654440700212" />
+  </component>
+</project>

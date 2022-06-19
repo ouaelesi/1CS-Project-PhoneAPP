@@ -22,16 +22,16 @@ const zonesData = [
   },
 ];
 
-const ZoneSwiper = () => {
+const ZoneSwiper = ({ navigation }) => {
   return (
-    <View style={{ marginTop: 15 , paddingLeft:20 , }}>
-      <Text style={{ fontSize: 25, fontWeight: "600", color: "#28333B" }}>
-        Categories
+    <View style={{ marginTop: 5, paddingLeft: 20 ,}}>
+      <Text style={{ fontSize: 20, fontWeight: "600", color: "#28333B" }}>
+        Best Zones 
       </Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <View style={{ flexDirection: "row"  , marginTop : 20 , padding:4}}>
+        <View style={{ flexDirection: "row", marginTop: 10, padding: 4 }}>
           {zonesData.map((zone, key) => (
-            <ZoneCard />
+            <ZoneCard key={key} navigation={navigation} />
           ))}
         </View>
       </ScrollView>
