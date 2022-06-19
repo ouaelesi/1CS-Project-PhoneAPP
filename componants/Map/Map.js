@@ -2,6 +2,7 @@ import { View, StyleSheet ,Text } from "react-native";
 import { useState, useEffect } from "react";
 import MapView, { Circle, Marker } from "react-native-maps";
 
+
 const Map = () => {
 
   // Map Style 
@@ -137,10 +138,6 @@ const Map = () => {
     },
   ];
 
-  // Display Zone after the click 
-  const [showed , setShowed] = useState(false) ; 
-
-
   const [lng, setLng] = useState(3.5);
   const [lat, setLat] = useState(35);
   const [zoom, setZoom] = useState(5);
@@ -148,7 +145,6 @@ const Map = () => {
   const [cartes, setCartes] = useState([]);
   const [markers, setMarkers] = useState([]);
   const [circles, setCircles] = useState([]);
-
   var loaded = false;
 
   useEffect(() => {
@@ -187,7 +183,7 @@ const Map = () => {
           key={carte.CarteId}
           center={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
           radius={carte.CartePerim}
-          fillColor={"black"}
+          fillColor={"rgba(0,0,0,0.5)"}
         ></Circle>
       ))
     );
