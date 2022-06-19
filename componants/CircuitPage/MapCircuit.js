@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { View, StyleSheet } from "react-native";
-
+import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet } from "react-native";
 import MapView, { Circle, Marker } from "react-native-maps";
+import CircuitInfos from "./CircuitInfos";
 
-const Map = () => {
+const MapCircuit = () => {
   const mapStyle = [
     {
       featureType: "all",
@@ -185,9 +185,9 @@ const Map = () => {
   }, [cartes]);
 
   return (
-    <View style={styles.mapContainer}>
+    <View style={Styles.mapContainer}>
       <MapView
-        style={styles.map}
+        style={Styles.map}
         region={{
           latitude: 35,
           longitude: 3.5,
@@ -200,22 +200,48 @@ const Map = () => {
         {markers}
         {circles}
       </MapView>
+      <View style={{}}>
+        <CircuitInfos
+          color={"#8F8B81"}
+          bgColor={"rgba(143,139,129,.3)"}
+          text={"Point"}
+          value={120}
+          unit={"KM"}
+        />
+        <CircuitInfos
+          color={"#E17E01"}
+          bgColor={"rgba(225,126,1,.3)"}
+          text={"Point"}
+          value={120}
+          unit={"KM"}
+        />
+        <CircuitInfos
+          color={"#3C464D"}
+          bgColor={"rgba(40,51,59 , .3)"}
+          text={"Point"}
+          value={120}
+          unit={"KM"}
+        />
+      </View>
     </View>
   );
 };
-const styles = StyleSheet.create({
+
+const Styles = StyleSheet.create({
   mapContainer: {
-    width: "95%",
-    height: "25%",
+    width: "100%",
+    height: 300,
     alignSelf: "center",
     alignItems: "center",
     marginTop: "2%",
     borderRadius: 20,
-    overflow: "hidden",
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   map: {
     height: "100%",
-    width: "100%",
+    width: "70%",
   },
 });
-export default Map;
+
+export default MapCircuit;

@@ -69,7 +69,7 @@ const ExplorePage = ({ navigation }) => {
           borderColor={"#3C464D"}
           small={false}
           id={3}
-          linkTo={""}
+          linkTo={"CircuitPage"}
           navigation={navigation}
         />
       </View>

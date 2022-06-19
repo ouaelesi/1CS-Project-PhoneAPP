@@ -14,6 +14,7 @@ import RegisterScreen from "./Pages/RegisterScreen";
 import ProfilePage from "./Pages/ProfilePage";
 import StartPage from "./Pages/StartPage";
 import CommentPage from "./Pages/CommentPage";
+import CircuitPage from "./Pages/CircuitPage";
 
 
 const Stack = createNativeStackNavigator();
@@ -40,6 +41,7 @@ export default function App() {
                 <Stack.Screen name="CommentPage" component={CommentPage}/>
                 <Stack.Screen name="EventPage" component={EventPage}/>
                 <Stack.Screen name="ProfilePage" component={ProfilePage}/>
+                <Stack.Screen name="CircuitPage" component={CircuitPage}/>
 
 
             </Stack.Navigator>
