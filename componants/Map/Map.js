@@ -1,11 +1,16 @@
-import { View, StyleSheet ,Text } from "react-native";
+import { View, StyleSheet, Text } from "react-native";
 import { useState, useEffect } from "react";
-import MapView, { Circle, Marker } from "react-native-maps";
+import MapView, { Circle, Marker, Callout } from "react-native-maps";
+import ZoneCard from "../HomePage/ZoneCard";
 
+import MapViewDirections from "react-native-maps-directions";
 
-const Map = () => {
-
-  // Map Style 
+const Map = ({ navigation }) => {
+  const coordinates = [
+    { latitude: 37.3318456, longitude: -122.0296002 },
+    { latitude: 37.771707, longitude: -122.4053769 },
+  ];
+  // Map Style
   const mapStyle = [
     {
       featureType: "all",
@@ -173,7 +178,11 @@ const Map = () => {
           pinColor={"#E17E01"}
           fillColor={"#E17E01"}
           onPress={() => console.log(carte.CarteLat)}
-        ></Marker>
+        >
+          <Callout tooltip>
+            <ZoneCard navigation={navigation} />
+          </Callout>
+        </Marker>
       ))
     );
 
@@ -203,7 +212,15 @@ const Map = () => {
     >
       {markers}
       {circles}
-   
+
+      <MapViewDirections
+        origin={coordinates[0]}
+        destination={coordinates[1]}
+        strockWidth={13}
+        const
+        apikey=""
+        strockColor="red"
+      />
     </MapView>
   );
 };

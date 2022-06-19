@@ -4,17 +4,14 @@ import { useState } from "react";
 
 const navitmes = [
   {
-    linkTo: "ZonePage",
-    icon: "grid-outline",
+    linkTo: "HomePage",
+    icon: "home-outline",
   },
   {
     linkTo: "MapPage",
     icon: "map-outline",
   },
-  {
-    linkTo: "HomePage",
-    icon: "home-outline",
-  },
+
   {
     linkTo: "CommentPage",
     icon: "notifications-outline",
@@ -41,11 +38,7 @@ const NavBar = ({ navigation, ActivePage }) => {
             size={activePage === itm.linkTo ? 27 : 25}
             color={`${activePage === itm.linkTo ? "#E17E01" : "white"}`}
           />
-          {activePage === itm.linkTo && (
-            <View
-              style={styles.navUnder}
-            ></View>
-          )}
+          {activePage === itm.linkTo && <View style={styles.navUnder}></View>}
         </Pressable>
       ))}
     </View>
@@ -79,14 +72,14 @@ const styles = StyleSheet.create({
   navItems: {
     color: "red",
   },
-  navUnder : {
+  navUnder: {
     backgroundColor: "#E17E01",
     width: 15,
     height: 5,
     borderRadius: 20,
     alignSelf: "center",
     marginTop: 3,
-  }
+  },
 });
 
 export default NavBar;

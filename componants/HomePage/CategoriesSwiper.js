@@ -2,7 +2,7 @@ import { View, Text, ScrollView, StyleSheet } from "react-native";
 
 const CategoriesSwiper = () => {
   return (
-    <View style={{ marginTop: 5, paddingLeft: 20 }}>
+    <View style={{ marginTop: 8, paddingLeft: 20 }}>
       <Text style={{ fontSize: 20, fontWeight: "600", color: "#28333B" }}>
         Categories
       </Text>
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 30.22,
     elevation: 5,
-    borderWidth : 1 , 
-    borderColor : "rgba(0,0,0,.05)" ,
+    borderWidth: 1,
+    borderColor: "rgba(0,0,0,.05)",
   },
 });
 

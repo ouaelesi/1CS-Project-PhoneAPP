@@ -12,7 +12,7 @@ const CircuitInfos = (props) => {
       <Text
         style={{
           color: props.color,
-          fontSize: 25,
+          fontSize: 18,
           fontWeight: "900",
         }}
       >
@@ -23,7 +23,7 @@ const CircuitInfos = (props) => {
           color: props.color,
           marginLeft: "auto",
           fontWeight: "900",
-          fontSize: 25,
+          fontSize: 30,
         }}
       >
         {props.value}
@@ -48,10 +48,10 @@ const Styles = StyleSheet.create({
     alignSelf: "center",
     borderWidth: 1,
     borderRadius: 10,
-    marginVertical: "2%",
+    marginVertical: 6,
+
     padding: "5%",
-    marginHorizontal: "1%",
-    backgroundColor: "red",
+    marginHorizontal: 1,
     paddingHorizontal: 10,
     width: "100%",
   },

@@ -46,7 +46,7 @@ const GoTOMap = ({ navigation }) => {
 const Styles = StyleSheet.create({
   container: {
     width: "80%",
-    height: 140,
+    height: 160,
     alignSelf: "center",
     marginTop: 15,
     borderRadius: 40,

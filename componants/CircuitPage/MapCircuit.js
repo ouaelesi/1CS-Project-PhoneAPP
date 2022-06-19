@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import MapView, { Circle, Marker } from "react-native-maps";
+import MapView, { Circle, Marker, Callout } from "react-native-maps";
 import CircuitInfos from "./CircuitInfos";
 
 const MapCircuit = () => {
@@ -168,7 +168,11 @@ const MapCircuit = () => {
           pinColor={"#E17E01"}
           fillColor={"#E17E01"}
           onPress={() => console.log(carte.CarteLat)}
-        ></Marker>
+        >
+          <Callout tooltip>
+            <Text>Ouael</Text>
+          </Callout>
+        </Marker>
       ))
     );
 
@@ -178,7 +182,7 @@ const MapCircuit = () => {
           key={carte.CarteId}
           center={{ latitude: carte.CarteLat, longitude: carte.CarteLong }}
           radius={carte.CartePerim}
-          fillColor={"black"}
+          fillColor={"rgba(0,0,0,0.3)"}
         ></Circle>
       ))
     );
@@ -200,25 +204,25 @@ const MapCircuit = () => {
         {markers}
         {circles}
       </MapView>
-      <View style={{}}>
+      <View style={{ width: "28%" }}>
         <CircuitInfos
           color={"#8F8B81"}
           bgColor={"rgba(143,139,129,.3)"}
-          text={"Point"}
-          value={120}
-          unit={"KM"}
+          text={"Points"}
+          value={40}
+          unit={"pts"}
         />
         <CircuitInfos
           color={"#E17E01"}
           bgColor={"rgba(225,126,1,.3)"}
-          text={"Point"}
-          value={120}
+          text={"Durée"}
+          value={45}
           unit={"KM"}
         />
         <CircuitInfos
           color={"#3C464D"}
           bgColor={"rgba(40,51,59 , .3)"}
-          text={"Point"}
+          text={"Distance"}
           value={120}
           unit={"KM"}
         />

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-
-import PointIntList from "../PointIntPage/PointIntList";
+import CheckBOX from "./CheckBOX";
 
 const CircuitSelectionBox = () => {
   const Points = ["", "", "", "", "", "", "", "", "", "", "", ""];
+
   return (
     <View style={Styles.container}>
       <View style={{ flexDirection: "row" }}>
@@ -17,13 +17,14 @@ const CircuitSelectionBox = () => {
       </View>
       <ScrollView style={{ height: 150, marginTop: 20 }}>
         {Points.map((elem, key) => (
-          <View>
-            <Text style={{ paddingVertical: 4 }}>Point d'intert</Text>
-            {/* <CheckBox
-              value={isSelected}
-              onValueChange={setSelection}
-              style={Styles.checkbox}
-            /> */}
+          <View key={key}>
+            <View style={{ flexDirection: "row" }}>
+              <CheckBOX />
+              <Text style={{ paddingVertical: 4, marginLeft: 8 }}>
+                Point d'intert
+              </Text>
+            </View>
+
             <View
               style={{
                 width: "100%",
