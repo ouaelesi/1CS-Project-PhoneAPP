@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    fontFamily: "Poppins-SemiBold",
     textAlign: "left",
   },
   icon: {

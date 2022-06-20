@@ -12,7 +12,6 @@ const CityCard = () => {
           style={{
             color: "#FFF",
             fontSize: 50,
-            fontFamily: "Poppins_600SemiBold",
           }}
         >
           Oran
@@ -21,7 +20,6 @@ const CityCard = () => {
           style={{
             color: "#FFF",
             fontSize: 20,
-            fontFamily: "Poppins_500Medium",
           }}
         >
           Front De Mer
@@ -37,7 +35,7 @@ const styles = StyleSheet.create({
     width: "98%",
     alignSelf: "center",
     justifyContent: "center",
-    borderRadius :25 , 
+    borderRadius: 25,
     shadowColor: "black",
     shadowOffset: {
       width: 0,
@@ -46,14 +44,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 2,
     elevation: 5,
-    
   },
   image: {
     width: "98%",
     height: "100%",
     borderRadius: 25,
     alignSelf: "center",
-    
   },
 
   imgText: {

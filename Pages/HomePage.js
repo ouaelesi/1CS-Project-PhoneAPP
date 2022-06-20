@@ -32,7 +32,6 @@ const HomePage = ({ navigation, ActivePag }) => {
               style={{
                 fontSize: 30,
                 marginLeft: 20,
-
                 color: "#28333B",
               }}
             >

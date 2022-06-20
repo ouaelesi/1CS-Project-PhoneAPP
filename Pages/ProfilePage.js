@@ -124,7 +124,7 @@ const ProfilePage = ({ navigation }) => {
         </Text>
         <ScrollView style={{ height: "30%" }}>
           {lieuVisite.map((elem, key) => (
-            <View>
+            <View key={key}>
               <View
                 style={{
                   flexDirection: "row",

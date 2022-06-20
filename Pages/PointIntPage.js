@@ -5,7 +5,7 @@ import DropDown from "../componants/PointIntPage/Dropdown";
 import CityCard from "../componants/CityCard";
 import { LinearGradient } from "expo-linear-gradient";
 
-const PointIntPage = ({navigation}) => {
+const PointIntPage = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <CityCard />
@@ -18,7 +18,6 @@ const PointIntPage = ({navigation}) => {
               fontWeight: "500",
               color: "#28333B",
               paddingVertical: 5,
-              fontFamily: "Poppins_500Medium",
             }}
           >
             Catégorie
@@ -33,7 +32,6 @@ const PointIntPage = ({navigation}) => {
               fontWeight: "500",
               color: "#28333B",
               paddingVertical: 5,
-              fontFamily: "Poppins_500Medium",
             }}
           >
             Thème
@@ -58,15 +56,13 @@ const PointIntPage = ({navigation}) => {
             fontSize: 20,
             fontWeight: "500",
             color: "#28333B",
-            padding:10 ,
- 
-            fontFamily: "Poppins_500Medium",
+            padding: 10,
           }}
         >
           Points d'interêts
         </Text>
 
-        <PointIntList navigation={navigation}/>
+        <PointIntList navigation={navigation} />
       </View>
       <LinearGradient
         colors={["transparent", "rgba(15,15,15,0.7)"]}
@@ -74,7 +70,7 @@ const PointIntPage = ({navigation}) => {
           width: "120%",
           height: 100,
           position: "absolute",
-          bottom : "0%"
+          bottom: "0%",
         }}
       ></LinearGradient>
     </SafeAreaView>
@@ -87,8 +83,8 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     paddingTop: 10,
-    paddingHorizontal : 5 ,
-    backgroundColor : "white"
+    paddingHorizontal: 5,
+    backgroundColor: "white",
   },
   searchContainer: {
     flex: 0,
