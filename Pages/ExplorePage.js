@@ -38,9 +38,9 @@ const ExplorePage = ({ navigation }) => {
 
       <View style={styles.btnContainer}>
         <View style={styles.circlesContainer}>
-          <View style={[styles.circles , {backgroundColor : "#E17E01"}]}></View>
-          <View style={[styles.circles , {backgroundColor : "#BAB2A0"}]}></View>
-          <View style={[styles.circles , {backgroundColor : "#3C464D"}]}></View>
+          <View style={[styles.circles, { backgroundColor: "#E17E01" }]}></View>
+          <View style={[styles.circles, { backgroundColor: "#BAB2A0" }]}></View>
+          <View style={[styles.circles, { backgroundColor: "#3C464D" }]}></View>
         </View>
         <View style={styles.rowButton}>
           <ExploreButton
@@ -91,14 +91,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     alignItems: "center",
   },
-  zoneGeoText: {
-    fontFamily: "Poppins-Medium",
-  },
-  zoneGeoLogo: {
-  
-  },
+  zoneGeoText: {},
+  zoneGeoLogo: {},
   zoneGeoName: {
-    fontFamily: "Poppins-Medium",
     position: "absolute",
     right: "0%",
   },
@@ -112,7 +107,7 @@ const styles = StyleSheet.create({
     marginVertical: "4%",
     padding: "1.5%",
     position: "relative",
-    paddingTop :25 , 
+    paddingTop: 25,
   },
   rowButton: {
     flexDirection: "row",
@@ -122,16 +117,16 @@ const styles = StyleSheet.create({
   smallBtn: {
     width: "50%",
   },
-  circles : {
-    width : 12 , 
-    height :12 , 
-    borderRadius : 50 , 
-    margin : 4
-  } , 
-  circlesContainer : {
-    position : "absolute" , 
-    flexDirection : "row",
-    right :15 ,
-    top :5
-  }
+  circles: {
+    width: 12,
+    height: 12,
+    borderRadius: 50,
+    margin: 4,
+  },
+  circlesContainer: {
+    position: "absolute",
+    flexDirection: "row",
+    right: 15,
+    top: 5,
+  },
 });

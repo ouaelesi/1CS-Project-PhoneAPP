@@ -71,7 +71,10 @@ const ZonePage = ({ navigation }) => {
       <View></View>
 
       <Text style={styles.title}>Description</Text>
-      <ScrollView style={{position : "relative"}} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        style={{ position: "relative" }}
+        showsVerticalScrollIndicator={false}
+      >
         <Text style={styles.desc}>
           Bienvenue à Oran, ville de la Méditérranée, la ville ou il fait bon
           vivre. Oran est une ville chargé d’histoire avec ses monuments, ses
@@ -90,7 +93,6 @@ const ZonePage = ({ navigation }) => {
           Moulay Abdelkader al-Jilani. L’agglomération s’étend de part et
           d’autre du ravin de l’oued Rhi, maintenant couvert.
         </Text>
-        
       </ScrollView>
       <LinearGradient
         colors={["transparent", "rgba(15,15,15,0.6)"]}
@@ -98,15 +100,12 @@ const ZonePage = ({ navigation }) => {
           width: "120%",
           height: 100,
           position: "absolute",
-          bottom : "0%"
+          bottom: "0%",
         }}
       ></LinearGradient>
       <TouchableOpacity ctiveOpacity={0.9} style={styles.btn}>
         <Text style={styles.btnText}>Explorer</Text>
       </TouchableOpacity>
- 
-      
-
     </SafeAreaView>
   );
 };
@@ -128,13 +127,11 @@ const styles = StyleSheet.create({
   },
   imgTextVille: {
     color: "white",
-    fontFamily: "Poppins-SemiBold",
     fontSize: 40,
   },
 
   imgTextRue: {
     color: "white",
-    fontFamily: "Poppins-Medium",
     fontSize: 20,
   },
 
@@ -142,13 +139,11 @@ const styles = StyleSheet.create({
     marginHorizontal: "3.5%",
     marginBottom: "2%",
     fontSize: 30,
-    fontFamily: "Poppins-SemiBold",
   },
   desc: {
     color: "#828282",
     marginHorizontal: "3.5%",
     fontSize: 15,
-    fontFamily: "Poppins-Regular",
   },
   btn: {
     backgroundColor: "#E17E01",
@@ -165,7 +160,6 @@ const styles = StyleSheet.create({
   btnText: {
     color: "#FFFFFF",
     fontSize: 25,
-    fontFamily: "Poppins-Medium",
     textAlign: "center",
   },
   boxes: {
@@ -181,12 +175,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  boxValue: {
-    fontFamily: "Poppins-Medium",
-  },
+  boxValue: {},
   boxTitle: {
     color: "#CCCCCD",
-    fontFamily: "Poppins-Medium",
   },
   backBtn: {
     position: "absolute",

@@ -7,7 +7,6 @@ const EventCard = () => {
       <View style={styles.information}>
         <Text
           style={{
-            fontFamily: "Poppins_500Medium",
             fontSize: 16,
             marginBottom: "2%",
             color: "#28333B",
@@ -18,7 +17,6 @@ const EventCard = () => {
         </Text>
         <Text
           style={{
-            fontFamily: "Poppins_500Medium",
             fontSize: 12,
             marginBottom: "4%",
             color: "#6B6B6B",
@@ -38,7 +36,6 @@ const EventCard = () => {
               ></Image>
               <Text
                 style={{
-                  fontFamily: "Poppins_500Medium",
                   fontSize: 8,
                   color: "#6B6B6B",
                 }}
@@ -53,7 +50,6 @@ const EventCard = () => {
               ></Image>
               <Text
                 style={{
-                  fontFamily: "Poppins_500Medium",
                   fontSize: 8,
                   color: "#6B6B6B",
                 }}
@@ -70,7 +66,6 @@ const EventCard = () => {
             ></Image>
             <Text
               style={{
-                fontFamily: "Poppins_500Medium",
                 fontSize: 10,
                 marginLeft: "4.5%",
                 color: "#FFF",
