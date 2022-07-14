@@ -212,15 +212,6 @@ const Map = ({ navigation }) => {
     >
       {markers}
       {circles}
-
-      <MapViewDirections
-        origin={coordinates[0]}
-        destination={coordinates[1]}
-        strockWidth={13}
-        const
-        apikey=""
-        strockColor="red"
-      />
     </MapView>
   );
 };
