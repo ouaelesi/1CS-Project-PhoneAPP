@@ -29,6 +29,6 @@
 <p align="center">
 <img align="center" width="20%" src="./assets/UI-images/Zone.png"/>
 <img align="center" width="20%" src="./assets/UI-images/navigation.png"/>
-<img align="center" width="20%" src="./assets/UI-images/events.png"/>
-<img align="center" width="20%" src="./assets/UI-images/Carte.png"/>
+<img align="center" width="19%" src="./assets/UI-images/events.png"/>
+<img align="center" width="17%" src="./assets/UI-images/Carte.png"/>
 </p>
