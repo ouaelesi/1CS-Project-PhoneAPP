@@ -1,31 +1,33 @@
 # 1CS-Project-PhoneAPP!
 
-## Start Page
+## Start Screen
 
 <p align="center">
 <img  width="20%" src="./assets/UI-images/start.png"/>
 </p>
 
-## LogIn/SignUp Pages
+## LogIn/SignUp Screens
 
 <p align="center">
 <img align="center" width="20%" src="./assets/UI-images/SignIn.png"/>
 <img align="center" width="20%" src="./assets/UI-images/SignUp.png"/>
 </p>
 
-## Home Page
+## Home Screen
 
 <p align="center">
   <img  width="20%" src="./assets/UI-images/Home.png"/>
 </p>
 
-## Map Page
+## Map Screen
 
 <p align="center">
   <img align="center" width="20%" src="./assets/UI-images/Map.png"/>
+   <img align="center" width="16.3%" src="./assets/UI-images/map2.png"/>
 </p>
 
-## Zones Pages
+## Zones Screens
+
 <p align="center">
 <img align="center" width="20%" src="./assets/UI-images/Zone.png"/>
 <img align="center" width="20%" src="./assets/UI-images/navigation.png"/>
@@ -33,9 +35,15 @@
 <img align="center" width="16%" src="./assets/UI-images/Carte.png"/>
 </p>
 
-## Notifications Page
+## Notifications Screen
 
 <p align="center">
 <img align="center" width="20%" src="./assets/UI-images/notification.png"/>
+<img align="center" width="16.3%" src="./assets/UI-images/notification2.png"/>
 </p>
 
+## Profil Screen
+
+<p align="center">
+<img align="center" width="20%" src="./assets/UI-images/Profil.png"/>
+</p>
