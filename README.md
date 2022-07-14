@@ -32,3 +32,10 @@
 <img align="center" width="19%" src="./assets/UI-images/events.png"/>
 <img align="center" width="16%" src="./assets/UI-images/Carte.png"/>
 </p>
+
+## Notifications Page
+
+<p align="center">
+<img align="center" width="20%" src="./assets/UI-images/notification.png"/>
+</p>
+
