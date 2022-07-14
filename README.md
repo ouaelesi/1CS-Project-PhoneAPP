@@ -1,6 +1,10 @@
 # 1CS-Project [AlGERISME]!
 
-### AlGERISME is an e-tourism phone application that helps visitors discover Algeria and have the best experience when visiting its places
+<p align="center">
+<img  width="40%" src="./assets/UI-images/LOGO.png"/>
+</p>
+
+#### AlGERISME is an e-tourism phone application that helps visitors discover Algeria and have the best experience when visiting its places
 
 ## Start Screen
 
