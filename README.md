@@ -9,8 +9,8 @@
 ## LogIn/SignUp Pages
 
 <p align="center">
-<img align="left" width="20%" src="./assets/UI-images/SignIn.png"/>
-<img align="left" width="20%" src="./assets/UI-images/SignUp.png"/>
+<img align="center" width="20%" src="./assets/UI-images/SignIn.png"/>
+<img align="center" width="20%" src="./assets/UI-images/SignUp.png"/>
 </p>
 
 ## Home Page
