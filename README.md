@@ -23,7 +23,7 @@
 
 <p align="center">
   <img align="center" width="20%" src="./assets/UI-images/Map.png"/>
-   <img align="center" width="16%" src="./assets/UI-images/map2.png"/>
+   <img align="center" width="17%" src="./assets/UI-images/map2.png"/>
 </p>
 
 ## Zones Screens
@@ -39,7 +39,7 @@
 
 <p align="center">
 <img align="center" width="20%" src="./assets/UI-images/notification.png"/>
-<img align="center" width="16%" src="./assets/UI-images/notification2.png"/>
+<img align="center" width="17%" src="./assets/UI-images/notification2.png"/>
 </p>
 
 ## Profil Screen
