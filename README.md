@@ -1,6 +1,20 @@
 # 1CS-Project-PhoneAPP!
-## Start Page 
+
+## Start Page
 
 <p align="center">
-  <img src="./assets/UI-images/1.png" alt="Sublime's custom image"/>
+<img  width="20%" src="./assets/UI-images/start.png"/>
+</p>
+
+## LogIn/SignUp Pages
+
+<p align="center">
+<img align="left" width="20%" src="./assets/UI-images/SignIn.png"/>
+<img align="left" width="20%" src="./assets/UI-images/SignUp.png"/>
+</p>
+
+## Home Page
+
+<p align="center">
+  <img  width="20%" src="./assets/UI-images/SignUp.png"/>
 </p>
