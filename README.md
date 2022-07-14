@@ -21,11 +21,14 @@
 
 ## Map Page
 
-<img align="center" width="20%" src="./assets/UI-images/Map.png"/>
+<p align="center">
+  <img align="center" width="20%" src="./assets/UI-images/Map.png"/>
+</p>
 
 ## Zones Pages
-
+<p align="center">
 <img align="center" width="20%" src="./assets/UI-images/Zone.png"/>
 <img align="center" width="20%" src="./assets/UI-images/navigation.png"/>
 <img align="center" width="20%" src="./assets/UI-images/events.png"/>
 <img align="center" width="20%" src="./assets/UI-images/Carte.png"/>
+</p>
